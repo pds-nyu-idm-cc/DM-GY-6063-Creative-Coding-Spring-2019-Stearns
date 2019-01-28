@@ -31,4 +31,5 @@ This course is an introductory programming class, appropriate for students with 
 ### [Class Schedule](schedule.md)
 ### [Research Presentations](research_presentation.md)
 ### [Class Resources](resources.md)
-
+### [Using GitHub: Getting Started](github_help/github_setup.md)
+### [Using Github: Maintaining your Fork](github_help/github_merging.md)
