@@ -24,21 +24,19 @@
 		Jan 29
 	</td>
 	<td valign="top">
-		Course and Student Introductions<br>
-		Overview of the Course<br>
-		In-class Exercise
+		Introductions<br>
+		Course Overview<br>
+		Setting up GitHub and Slack<br>
+		Intro to Processing<br>
+		Challenge 01
 	</td>
 	<td valign = "top">
-		<li><strong><a href = "https://idm-cc.slack.com">Join the Slack channel for this course</a>!</strong></li>
-		<li>Get a <a href = "https://github.com/"">Github account</a>. Send your <strong>USERNAME</strong> to me via DM on <a href="https://idm-cc.slack.com" target=_blank>Slack</a>.</li>
- 		<li>Install <a href = "https://processing.org/download/">Processing</a>.</li>
- 		<li>Go through the <a href="https://processing.org/tutorials/">tutorials on Processing.org</a> and explore the examples in <code>File > Examples > Basics</code>.</li>
-		<li>Install <a href = "https://desktop.github.com/">Github Desktop for Mac/Windows</a>.</li> 
-		<li>Install <a href = "http://www.sublimetext.com/">Sublime</a>.</li>
+	 	<li>Go through the <a href="https://processing.org/tutorials/">tutorials on Processing.org</a> and explore the examples in <code>File > Examples > Basics</code>.</li>
 		<!--<li>Join our class on <a href ="https://www.openprocessing.org/class/58523">openProcessing </a> and enter code FCBC16 </li>-->
 		<!--<li>Read: Rushkoff’s Program or Be Programmed - Introduction (on Slack)</li>-->
 		<li>Read: Learning Processing - Ch. 1 - 2</li>
 		<li>Watch: <a href="https://www.youtube.com/user/shiffman/playlists?view=50&sort=dd&shelf_id=2">Shiffman, Learning Processing 1-4 (including sub-videos, ie, 4.4, 4.6)</li></a>
+		<li>Assignment 01</li>
 	</td>
 </tr>
 

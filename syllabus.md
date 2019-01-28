@@ -4,7 +4,7 @@ Course repository for Creative Coding Grad section A with Phillip David Stearns
 
 * **Professor:** Phillip David Stearns
 * **Email:** pds8 at nyu dot edu
-* **Slack:** [https://idm-cc.slack.com](https://idm-cc.slack.com)
+* **Slack:** [https://idm-cc.slack.com](https://idm-cc.slack.com) - [Sign up here.](https://join.slack.com/t/idm-cc/signup)
 <!--* [OpenProcessing](https://www.openprocessing.org)-->
 
 **Office Hours: by appointment** 

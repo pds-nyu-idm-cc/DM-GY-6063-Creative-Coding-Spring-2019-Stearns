@@ -34,6 +34,7 @@ This book is available for purchase in the NYU bookstore, and will be on reserve
 <!--* FTP Client - [Cyberduck](https://cyberduck.io/?l=en), [Transmit](https://panic.com/transmit/) (Mac only), [FileZilla](https://filezilla-project.org/)-->
 * [Nature of Code](http://natureofcode.com/) NoC
 * [Slack](https://idm-cc.slack.com) - Install the Apps for BOTH Desktop AND Mobile
+* [Sign Up](https://join.slack.com/t/idm-cc/signup) for the class Slack with your NYU email
 
 ### Github Guides
 * [Getting Started](github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
