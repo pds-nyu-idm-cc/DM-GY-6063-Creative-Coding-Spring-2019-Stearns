@@ -64,9 +64,9 @@ This class is hybrid lecture & lab / classroom and online
 
 # Getting Started with GitHub
 
-1. Go to: [https://github.com]() and setup an account with your nyu.edu email
-2. Share your GitHub user name with me on [Slack](https://idm-cc.slack.com).
-3. Log into your GitHub account.
-4. Download [GitHub Desktop](https://desktop.github.com/), Install and Login.
-5. Navigate to the [class repo](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns).
-6. Click on the fork
+### Github Guides
+* [Getting Started](github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
+* [Merging Class Repository Changes](github_help/github_merging.md) - Keep your Fork and Branch up to date!
+
+---
+

@@ -165,7 +165,7 @@ A typical week will aim for the following schedule:
 
 * **Pair programming** is a popular way to learn and to work on projects. Two people share one computer and write code together. For the second half of class, an exercise will be given which will be worked on in pairs. The exercise will be due at the end of the class period and presented to class. On occasions the deadline will be at another point. Yet, the exercise is meant to be worked on together - on one laptop, in one program. After the first couple of challenges, you will be paired up strategically by me. Each of you will have something to offer and something to gain. 
 
-* **Submitting Homework** will be done via GitHub. It is more important than your resume, whether you are an artist or designer. It’s used largely for software, but can be used for anything, like this class. It’s important to become familiar with it, develop good habits. See the assigned reading links for more information.
+* **Submitting Homework** will be done via GitHub. Our Class Repository is [here](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns). You can refer to guides for [getting started](github_help/github_setup.md) and [maintaining your fork](github_help/github_merging.md). It'll take a bit to get used to, but once you understand the basic flow, you'll have a handle on the industry standard for collaborative coding projects. See the assigned reading links for more information.
 
 * **Time Management and Practice** are everything. You will need to manage your time it to have reasonable accomplishments in this class. The material is cumulative. The readings and videos are essential. Writing code is the only way to make progress and to fully synthesize the material. It becomes evident quite quickly. Develop excellent time management. You will need 8-12 hours outside of class to succeed. 
 
@@ -181,19 +181,14 @@ If you use code from online, whether for inspiration, modification or reference,
 
 ### How to Submit Assignments via GitHub
 
-To do this, you will be utilizing 3 apps: a browser, GitHub desktop and a file browser (Windows Explorer, Finder, Terminal, etc) to complete this entire process.
+You will need 3 apps: a browser, GitHub desktop and a file browser (Windows Explorer, Finder, Terminal, etc) to complete this entire process.
+
+**Complete the [Getting Started With GitHub](github_help/github_setup.md) walkthrough.**
 
 
-Do the follow these steps to setup each assignment on Github:
-
-0. Save your work AND all of the necessary support files (index.html, libraries folder, pictures, media, etc) in a folder that is titled in this manner on your computer: *FirstName\_LastName\_Assignment-##*, etc.
-1. Go to your Github Repository page in a browser and create a new repo for the assignment, naming it Creative_Coding_Sketch_1
-2. Clone that repo to your desktop (it should launch the Github desktop app). Save that folder within a folder on your computer for this class.
-3. Using a file browser (Windows Explorer, Finder, etc), take the folder created in step 0 and drop it INSIDE the folder you just created by cloning in step 2.
-4. Go back to the GitHub Desktop app. In the summary field, write what additions you have made to your code in summary. In the description, add greater details, notes, and questions for me.
-5. Hit the "sync button" in the upper right hand corner. This uploads your code to your repo page on the Github website.
-6. Refresh your browser page of your repo. You should now see your code and files up on your repo
-7. As you continue to work on this project, save the code on your desktop, in the folder created in step 0, and have since moved to be within the folder created at step 2. After saving each work session's progress, re-visit the Github desktop app to push the changes to your Github repo online. Make sure to fill out the summary and description notes. Do NOT and I repeat, DO NOT, make a new folder within this folder with the weeks editions. IE, you should not have "Week 1 work", "week 2 work", etc. Github tracks your changes and keeps them in history. It's version control! Yay!
+1. Save your work AND all of the necessary support files (index.html, libraries folder, pictures, media, etc) in a 'project' folder that is titled in this manner on your computer: *FirstName\_LastName\_Assignment-##*, etc. For example: `~/DMGY6063/Phillip_Stearns_Assignment-01` or `~/DMGY6063/Phillip_Stearns_Challenge-01` or `~/DMGY6063/Phillip_Stearns_Midterm-Project`, etc.
+2. Place this 'project' in the folder you created in your cloned Fork of the class repository, e.g. `DM-GY-6063-Creative-Coding-Spring-2019-Stearns/student_work/pstearns` where pstearns will be **your** _first initial_ and _lastname_
+3. Follow the steps 19 through 22 in the [Getting Started With GitHub](github_help/github_setup.md) walkthrough.
 
 ## [Research Presentation](research_presentation.md)
 

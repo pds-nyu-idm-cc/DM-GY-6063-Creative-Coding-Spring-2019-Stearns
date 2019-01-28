@@ -19,20 +19,25 @@
 
 ## Required Course Materials
 
-#### Texts
+### Texts
 * [Learning Processing, SECOND EDITION by Daniel Shiffman](http://learningprocessing.com/) ISBN-13: 978-0123944436 LP
 This book is available for purchase in the NYU bookstore, and will be physically on reserve at the NYU School of Engineering library. You can check the status of the book [here](http://library.nyu.edu/). This book in it's initial edition is available as an online book via [here](http://bobcat.library.nyu.edu).
 * [Generative Design by Bohnacker, GroB, Laub & Lazzeroni](http://www.generative-gestaltung.de/about) ISBN-13: 978-1616890773 GD
 This book is available for purchase in the NYU bookstore, and will be on reserve at the NYU School of Engineering library. You can check the status of the book [here](http://library.nyu.edu/)
 * [Getting Started with P5.js](https://p5js.org/books/)
 
-#### Software
+### Software
 * [Processing](https://processing.org/download/)
 * [P5.js](http://p5js.org/download/) Download P5.js complete
+* [GitHub Desktop](https://desktop.github.com)
 * [Sublime Text](https://www.sublimetext.com/3) - Text Editor for Developers
 <!--* FTP Client - [Cyberduck](https://cyberduck.io/?l=en), [Transmit](https://panic.com/transmit/) (Mac only), [FileZilla](https://filezilla-project.org/)-->
 * [Nature of Code](http://natureofcode.com/) NoC
 * [Slack](https://idm-cc.slack.com) - Install the Apps for BOTH Desktop AND Mobile
+
+### Github Guides
+* [Getting Started](github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
+* [Merging Class Repository Changes](github_help/github_merging.md) - Keep your Fork and Branch up to date!
 
 ### Required Resources 
 
