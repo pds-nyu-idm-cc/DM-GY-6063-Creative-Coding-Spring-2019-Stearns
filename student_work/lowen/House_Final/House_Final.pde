@@ -1,3 +1,5 @@
+//Lauren Owen
+
 int moveX;
 float colorAngle = 0.0;
 
@@ -226,3 +228,5 @@ void sun() {
   if (moveX==width-30)
     moveX=-150;
 }
+
+//Lauren Owen
