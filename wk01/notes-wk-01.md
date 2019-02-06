@@ -37,9 +37,18 @@ This class is hybrid lecture & lab / classroom and online
 6. Final Project Milestone
 7. Final Project
 
- 
+#### GitHub Repo: [https://github.com/pds-nyu-idm-cc](https://github.com/pds-nyu-idm-cc) 
 #### [Syllabus](../syllabus.md)
 #### [Schedule](../schedule.md)
+
+---
+
+# Setting Up Our environment
+
+1. Get Processing
+2. Setup Github
+3. Setup Slack
+4. Start GitHub Wiki
 
 ---
 
@@ -55,6 +64,7 @@ This class is hybrid lecture & lab / classroom and online
 * Secondary means of communication
 
 ---
+
 
 # Class Github
 
