@@ -1,0 +1,15 @@
+void setup(){
+  size(640, 360);
+  background(0);
+ 
+}
+
+void draw(){
+  //base of the house//
+  rect(320,180,150,100);
+  //door of the house//
+  rect(385,220,25,60);
+  //roof of the house//
+  triangle(320,180,395,120,470,180);
+  //quad(395,120,470,90,470,180,510,110);
+}
