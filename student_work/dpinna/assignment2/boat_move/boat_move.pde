@@ -1,5 +1,5 @@
 import processing.sound.*;
-PShape s, v;
+PShape s, boat, island, leaves;
 PFont font;
 SoundFile file;
 SoundFile success;
@@ -14,27 +14,32 @@ void setup() {
   smooth();
   //myBoat = new Boat(boatX, boatY);
   file = new SoundFile(this, "sail.wav");
-  
+
   file.play();
 }
 void draw() {
 
   background(208, 255, 255);
-  v = loadShape("boat_color.svg");
-  
+  boat = loadShape("boat_color.svg");
+  island = loadShape("island.svg");
+  leaves = loadShape("leaf.svg");
 
 
   //island 
   //to reach the island x>=350, y>=550;
   noStroke();
   fill(255, 242, 155);
-  ellipse(600, 700, 250, 30);
+  //ellipse(600, 700, 250, 30);
+  shape(island, 470, 510);
+  
   //myBoat.sail(boatX, boatY);
   //myBoat.display();
 
   //boat visualised 
-  shape(v, boatX, boatY, 150, 150);
+  shape(boat, boatX, boatY, 150, 150);
+  shape(leaves, 575, 470);
   positionLogic();
+  
 }
 
 void showText() {
