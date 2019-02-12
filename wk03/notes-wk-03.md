@@ -21,247 +21,72 @@ Please pick two of the three subjects to present on. ~5 minutes each.
 #### Observations:
 
 * boolean
-* the `map()` function
-* commenting
+* states
 * motion
 
-## Coding Topics
 
-![Web Developers](images/webdeveloper.jpg)
 
-### Variables
+## Arrays
 
-Variables are containers for storing values. In Processing, these variables have a range of different types. These types need to be specified when a variable is declared. Declaring a variable is done like this:
+![](images/array.jpg)
 
-`int myVariable;`
-
-Our variable, `myVariable`, is of type `int`, and since we didn't initialize it, it's uninitialized.
-
-We can initialize it like so:
-
-`int myVariable=0;`
-
----
-
-### Datatypes
-
-Since Procesing is built on Java, it uses most all the same datatypes you'll find in Java. Here are some of the basics:
-
-* `int` Whole numbers
-* `float` Numbers with decimal points
-* `boolean` true or false
-* `char` a single character
-* `String` a composite of characters
-* `color` int that Procesing treats like a 32bit ARGB color value
-* `byte` an 8 bit value
-
----
-
-### Operators
-
-Computers are made to manipulate numbers. We use oprators to performa various manipulations. Some simple ones that we are more familiar with:
-
-* `+` Addition
-* `-` Subtraction
-* `*` Multiplication
-* `/` Division
-
-Some more advanced operators:
-
-* `%` Modulo
-* `<<` Shift left
-* `>>` Shift right
-* `|` OR
-* `&` AND
-* `^` XOR
-
----
-
-### Movement
-
-#### Linear Motion
-
-Let's start with this basic sketch. Copy paste into Processing.
+Arrays store multiple values of a single type.
 
 ```
-// declare vairables
-float x,y;
-float r = 15;
+/*
+We can declare an array of any data type
+by adding the [] brackets.
+*/
 
-void setup(){
 
-  // set screen size
-  size(500, 500);
+// declaring & filling the array manually
+  String[] names = {
+    "Fran", 
+    "Sam", 
+    "Dave", 
+    "Jane", 
+    "Eric", 
+    "Lesley", 
+    "Rachel", 
+    "Jonas"
+  };
   
-  // initialize variables
-  x=width/2;
-  y=height/2;
-  
-  // set starting background color
-  background(255);
-}
-
-void draw(){
-  
-  // blank out canvas
-  background(255);
-  
-  // style our shape
-  strokeWeight(1);
-  stroke(0);
-  fill(127);
-  
-  // draw shape
-  ellipse(x,y,2*r,2*r);
-}
-
-```
+// or if you don't know yet what your Strings will be,
+// but you know how many you will have
+// String[] names = new String[8];
 
 
-
-#### Cyclical Motion
-
-Let's start with this code. It's not perfect so we'll have to change some things.
-
-```
-// declare vairables
-float x,y;
-float r = 15;
-float speed = .01;
-float angle = 0;
-
-void setup(){
-
-  // set screen size
-  size(500, 500);
-  
-  // initialize variables
-  x=width/2;
-  y=height/2;
-  
-  // set starting background color
-  background(255);
-}
-
-void draw(){
-  
-  // blank out canvas
-  background(255);
-  
-  // style our shape
-  strokeWeight(1);
-  stroke(0);
-  fill(127);
-  
-  // update the motion
-  x=100*sin(angle);
-  y=100*cos(angle);
-  angle+=speed;
-  
-  // draw shape
-  ellipse(x,y,2*r,2*r);
-  
-}
-
-```
----
-
-### Arrays
-
-The easiest way to think about arrays is to treat them like lists. Arrays can be made using any datatype.
-
-```
-float[] myValues;
-
-void setup(){
-	size(100,100);
-	myValues = new float[100];
-}
-```
-
----
-### Interaction
-
-#### Mouse Input
-
-* mouseButton
-* mouseClicked()
-* mouseDragged()
-* mouseMoved()
-* mousePressed()
-* mousePressed
-* mouseReleased()
-* mouseWheel()
-* mouseX
-* mouseY
-* pmouseX
-* pmouseY
-
-```
-// declare vairables
-
-void setup(){
-
-  // set screen size
-  size(500, 500);
-  
-  // set starting background color
-  background(255);
-}
-
-void draw(){
-  
-  // blank out canvas
-  background(255);
-  
-  // style our shape
-  strokeWeight(1);
-  stroke(0);
-  fill(127);
-  
-  // draw shape
-  ellipse(mouseX,mouseY,2*r,2*r);
-  
-}
-```
-
-
-#### Keyboard Input
-
-* key
-* keyCode
-* keyPressed()
-* keyPressed
-* keyReleased()
-* keyTyped()
-
-```
-void setup(){
-
-  // set screen size
+void setup() {
   size(100, 100);
-  
-  // set starting background color
-  background(255);
+  noLoop();
 }
 
-void draw(){
-  
-  // blank out canvas
-  background(255);
-  
+void draw() {
+  // to access the contents of an array
+  // specify the index you want to retrieve
+  println(names[0]);
+  println(names[1]);
+  println(names[2]);
+  println(names[3]);
+  println(names[4]);
+  println(names[5]);
+  println(names[6]);
+  println(names[7]);
 }
 
-void keyPressed(){
-  println("Key pressed: "+key);
-  println("Keycode pressed: "+keyCode);
-}
 ```
+
+
 ## Conditionals
+
+![](images/consequences.gif)
+
 
 ### Boolean Logic:
 
-Evaluates a statement based on logical conditions. Common conditionals are:
+A boolean expression is one that compares two values based upon a logical condition. The evaluation of an expression results in either a true or a false. Common conditionals are:
+
+These evaluate to true for the case that:
 
 * `==` EQUAL TO: if the value of A and the value of B are equal
 * `!=` NOT EQUAL TO: opposite of `==`
@@ -274,7 +99,13 @@ Evaluates a statement based on logical conditions. Common conditionals are:
 
 ### `if` statements
 
-Oftentimes we want parts of our code to execute based upon a condition. `if` statements are a simple way to do this: 
+Oftentimes we want parts of our code to execute based upon a condition. `if` statements are a simple way to do this.
+
+`if	` takes a boolean expression as an argument and executes the code in `{}` or the single line immediately following it.
+
+Statements like `else` are used to catch the cases where the expression provided `if` evaluates to false. `else if()` allows us to chain conditions for execution and perform different calculations based on the results.
+
+Here it is in theory:
 
 ```
 // a simple if statement:
@@ -302,6 +133,10 @@ if(someCondition){
 	doWhatever();
 }
 ```
+
+## Loops
+
+![](images/whileloop.gif)
 
 ### `while` loops
 
@@ -349,16 +184,43 @@ switch(key){
 		
 }
 ```
-## Challenge
+## Functions
 
-Do we know enough to make a simple collision detection engine?
+![](images/pollock.jpg)
 
-**Step 1.** See if you can define a region with a shape, and then detect whether the mouse is positioned over it. Give the user some feedback.
+If we find that we are typing the same code over and over, of if the same block of code appears in multiple places, maybe it's time to **abstract** it into a function.
 
-**Step 2.** Set an object in motion and see if you can get it to stay on screen.
+Functions and other abstractions are handy ways to simplify and organize code by functionality.
 
-**Step 3.** Set two objects in motion and make them change directions when they come in contact.
+```
+void setup() {
+  size(100, 100);
+  noLoop();
+}
 
-## Assignment 02
+void draw() {
 
-Make a simple game that takes user input and uses a simple collision detection engine.
+  // when I want to call my function, I do this:
+
+  myFunction();
+}
+
+// we define a function and then call it
+// a function is defined like so
+
+void myFunction() {
+  println("Yay! I made a function!");
+}
+
+// I generally define functions after the setup and draw functions
+
+
+```
+
+## Classes
+
+
+
+Classes allow us to define our own objects and to simplify the management of complex.
+
+Allow me to demonstrate.
