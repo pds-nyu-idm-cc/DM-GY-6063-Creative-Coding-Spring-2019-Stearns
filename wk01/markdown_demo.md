@@ -1,7 +1,9 @@
 # Some Text That's H1
 ## Header 2
 ### H3
+
 ---
+
 Testing testing
 
 **Lorem Ipsem LOL**
@@ -10,6 +12,7 @@ Testing testing
 use html <br> for line breaks
 ```
 <br>
+
 _slanty_
 
 [Links Look like this](https://duckduckgo.com)
@@ -18,7 +21,7 @@ _slanty_
 
 <!-- Comment -->
 
-These `marks` make inline code formatting.
+These \`\` `marks` make inline code formatting.
 
 ```
 Creates a code box.

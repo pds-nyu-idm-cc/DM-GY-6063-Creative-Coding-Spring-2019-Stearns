@@ -75,8 +75,8 @@ This class is hybrid lecture & lab / classroom and online
 # Getting Started with GitHub
 
 ### Github Guides
-* [Getting Started](github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
-* [Merging Class Repository Changes](github_help/github_merging.md) - Keep your Fork and Branch up to date!
+* [Getting Started](../github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
+* [Merging Class Repository Changes](../github_help/github_merging.md) - Keep your Fork and Branch up to date!
 
 ---
 
