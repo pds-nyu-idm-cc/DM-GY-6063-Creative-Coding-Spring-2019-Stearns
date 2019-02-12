@@ -7,10 +7,10 @@
 // in our Node class, we define an object that has all the fields we were previously using arrays to hold 
 class Node {
   // fields
-  float x; // location
-  float y;
-  float sX; // speed
-  float sY;
+  
+  // PVectors are awesome more on this later
+  PVector pos;
+  PVector vel;
   color fC; // fill color
   color sC; // stroke color
 
@@ -21,10 +21,8 @@ class Node {
   // the constructor below is for creating a Node object without arguments
 
   Node() {
-    x = random(width);
-    y = random(height);
-    sX = random(-2.5, 2.5);
-    sY = random(-2.5, 2.5);
+    pos = new PVector(random(width), random(height));
+    vel = new PVector(random(-2.5, 2.5),random(-2.5, 2.5));
     fC = color(random(256), random(256), random(256));
     sC = color(255);
   }
@@ -32,28 +30,27 @@ class Node {
   // methods
 
   void update() {
-    x+=sX;
-    y+=sY;
+    pos.add(vel);
     bounce();
   }
   
   void bounce(){
   // effectively detects collision with canvas edge
     // reverses the direction and speed
-    if (x < 0 && sX < 0) {
-      sX*=-1;
-      x=0;
-    } else if (x > width && sX > 0) {
-      sX*=-1;
-      x=width;
+    if (pos.x < 0 && vel.x < 0) {
+      vel.x*=-1;
+      pos.x=0;
+    } else if (pos.x > width && vel.x > 0) {
+      vel.x*=-1;
+      pos.x=width;
     }
 
-    if (y < 0  && sY < 0) {
-      sY*=-1;
-      y=0;
-    } else if (y > height  && sY > 0) {
-      sY*=-1;
-      y=height;
+    if (pos.y < 0  && vel.y < 0) {
+      vel.y*=-1;
+      pos.y=0;
+    } else if (pos.y > height  && vel.y > 0) {
+      vel.y*=-1;
+      pos.y=height;
     }
   }
 
@@ -61,7 +58,7 @@ class Node {
   void render() {
     stroke(sC);
     strokeWeight(5);
-    point(x, y);
+    point(pos.x, pos.y);
   }
   
   // draw the lines
@@ -71,11 +68,11 @@ class Node {
     // created a distance() function to return the distance between two points
     // this function now accepts Node objects as arguments
     // note that accessing fields is done using . as in Object.field
-    line(x, y, _n.x, _n.y);
+    line(pos.x, pos.y, _n.pos.x, _n.pos.y);
   }
 
   float distance(Node _n) {
     // distance calculated as the hypotenuse formed 
-    return pow( pow( _n.x - x, 2) + pow( _n.y - y, 2), 0.5);
+    return pow( pow( _n.pos.x - pos.x, 2) + pow( _n.pos.y - pos.y, 2), 0.5);
   }
 }
