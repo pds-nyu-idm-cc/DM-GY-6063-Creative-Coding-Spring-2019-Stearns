@@ -9,7 +9,7 @@ class Boat {
 
   Boat(int tempXpos, int tempYpos) {
     shapeMode(CENTER);
-    v = loadShape("boat_color.svg");
+    boat = loadShape("boat_color.svg");
     xpos = tempXpos;
     ypos = tempYpos;
     //xspeed = tempXspeed;
@@ -17,7 +17,7 @@ class Boat {
 
 
   void display() {
-    shape(v, xpos, ypos, 100, 100);
+    shape(boat, xpos, ypos, 100, 100);
   }
 
   void sail(int xpos, int ypos) {
