@@ -8,6 +8,10 @@ Cool the see the range of approaches to making a game with fairly simple mechani
 * WK 02 - We did some heavy lifting with variables, types, operations, boolean expressions, conditionals, and loops. Oh yeah, and we also had interactivity as well as motion in there too.
 * WK 03 - We're working with motion, controlling the flow of our code with if statements and for loops. We reviewed Arrays and For loops and introduced accelerated motion as well as classes.
 
+Thanks to Jay for the presentation on Casey Reas and Siebren Versteeg. They represent two distinct perspective on using code in their creative practice.
+
+Have a look [here](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/research_presentation.md) for who's up next!
+
 I think some of the big take aways for this class come for the code modifications performed in class:
 
 1. Get comfy with abstraction. Our code should be easy to read, with functions containing only a handful of lines of code. The mechanics can be hidden away so that we can focus on behaviors and flow
