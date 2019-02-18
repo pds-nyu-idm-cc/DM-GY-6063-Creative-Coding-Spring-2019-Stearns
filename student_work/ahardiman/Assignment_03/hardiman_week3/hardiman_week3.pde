@@ -22,11 +22,9 @@ float circleH = 450;
 float circleI = 425;
 float circleJ = 450;
 
-//speed
-float xspeed = random (-3);
-
 //score
 int totalscore = 0;
+
 
 
 void setup(){
@@ -78,14 +76,59 @@ void draw(){
 
 void mousePressed() {
   
-  totalscore++;
+  //circles clicked = score increasing
+  
+  float a = dist(circleX,circleY,mouseX,mouseY);
+  
+  if (a <= 20) {
+    totalscore = totalscore + 1;
 
   }
   
-
-
+  float b = dist(circleA,circleB,mouseX,mouseY);
   
- 
-
+  if (b <= 20) {
+    totalscore = totalscore + 1;
+  }
   
- 
+  float c = dist(circleC,circleD,mouseX,mouseY);
+  
+  if (c <= 20) {
+    totalscore = totalscore + 1;
+  }
+  
+  float d = dist(circleE,circleF,mouseX,mouseY);
+  
+  if (d <= 20) {
+    totalscore = totalscore + 1;
+  }
+  
+  float e = dist(circleG,circleH,mouseX,mouseY);
+  
+  if (e <= 20) {
+    totalscore = totalscore + 1;
+  }
+  
+   float f = dist(circleI,circleJ,mouseX,mouseY);
+  
+  if (f <= 20) {
+    totalscore = totalscore + 1;
+    
+  }
+  
+  //win
+  if (totalscore >= 5) {
+    noLoop();
+    background(244,238,236);
+    textSize(18);
+    text("You win!", 215, height/2);
+  } else if 
+  
+  //lose
+  (totalscore < 5) {
+    noLoop();
+    background(244,238,236);
+    textSize(18);
+    text("Oh no.. Try again", 175, height/2);
+  }
+}
