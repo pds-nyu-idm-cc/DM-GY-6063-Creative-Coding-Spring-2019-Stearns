@@ -1,3 +1,9 @@
+// in this ellaboration, we add:
+// ArrayLists
+// Key bindings
+// mouse interactivity
+// multiple constructors
+
 String mode="WRAP";
 
 // draw lines if shorter than
