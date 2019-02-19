@@ -29,7 +29,6 @@
 		Setting up GitHub and Slack<br>
 		Intro to Processing<br>
 		Challenge 01
-		<a href="wk01/HomeWork-WK01.md">HOMEWORK WK01</a>
 	</td>
 	<td valign = "top">
 	 	<li>Go through the <a href="https://processing.org/tutorials/">tutorials on Processing.org</a> and explore the examples in <code>File > Examples > Basics</code>.</li>
