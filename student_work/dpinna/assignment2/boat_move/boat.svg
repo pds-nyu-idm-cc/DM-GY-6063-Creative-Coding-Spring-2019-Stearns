@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="270" height="216" viewBox="0 0 270 216">
-  <g fill="#7F3737" fill-rule="evenodd">
-    <polygon fill="#A79458" points="0 175 270 175 250 189 183 217 31.172 217"/>
-    <polygon fill="#252C4D" points="10.5 189 250 189 183 217 31.172 217"/>
-    <rect width="7" height="175" x="132" fill="#D8D8D8"/>
-    <polygon fill="#FFF" stroke="#979797" points="132 2 132 168 20 138 78 53"/>
-    <polygon fill="#FFF" stroke="#979797" points="139 2 268 175 163 155"/>
-  </g>
-</svg>
