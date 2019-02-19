@@ -1,3 +1,7 @@
+// back to using nodes...
+// Check out the class definition for the implementation of Processing's 
+// PVector class
+
 // draw lots of nodes
 int qtyNodes = 250;
 // draw lines if shorter than
