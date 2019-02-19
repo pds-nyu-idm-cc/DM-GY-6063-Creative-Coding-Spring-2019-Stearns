@@ -1,3 +1,6 @@
+//float bubbles_posY[]= bubbles_posY;
+//float bubbles_posY = 
+
 // 1st circle
 float circleX = 50;
 float circleY = 450;
@@ -115,6 +118,10 @@ void mousePressed() {
     totalscore = totalscore + 1;
     
   }
+}
+  
+  
+void mouseReleased(){
   
   //win
   if (totalscore >= 5) {
@@ -122,10 +129,7 @@ void mousePressed() {
     background(244,238,236);
     textSize(18);
     text("You win!", 215, height/2);
-  } else if 
-  
-  //lose
-  (totalscore < 5) {
+  } else if (totalscore >=5) {
     noLoop();
     background(244,238,236);
     textSize(18);
