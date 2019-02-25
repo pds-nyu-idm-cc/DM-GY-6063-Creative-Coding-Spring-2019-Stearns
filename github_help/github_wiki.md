@@ -54,14 +54,19 @@ Migrate (copy paste) your posts from their previous location into this file. You
 
 ![](images/clone_class_wiki_10.png)
 
-## Step 11: Commit Changes
+## Step 11: Create a folder for your images
+
+1. Find the `images` folder in the .wiki repo.
+2. Create a folder in in with your name. e.g. `pstearns`
+3. This is where your images go
+4. If you want to reference images place there in your journal, used this format `![](images/pstearns/example.png)` using your name and the name of the file.
 
 ![](images/clone_class_wiki_11.png)
 
-## Step 12: Push to Origin
+## Step 12: Commit The Changes
 
 ![](images/clone_class_wiki_12.png)
 
-## Step 13: Do you even need to create a pull request?
+## Step 13: Push to Origin
 
 ![](images/clone_class_wiki_13.png)
