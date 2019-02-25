@@ -4,7 +4,8 @@ class Island {
   int xpos, ypos;
 
 
-  Island(int tempXpos, int tempYpos) {
+  Island(
+    int tempXpos, int tempYpos) {
 
     shapeMode(CENTER);
     island = loadShape("island.svg");

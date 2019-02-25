@@ -17,8 +17,8 @@ void setup() {
   playMusic();
 
   level1 = new Level(1, "Level One", islandXlev1, islandYlev1, 100, 300, 250, 320, 420, 450, 520, 430);
-  level2 = new Level(2, "Level Two", islandXlev2, islandYlev2, 100, 300, 200, 300, 400, 300, 500, 300);
-  level3 = new Level(3, "Level Three", islandXlev3, islandYlev3, 50, 280, 120, 250, 180, 280, 420, 350);
+  level2 = new Level(2, "Level Two", islandXlev2, islandYlev2, 100, 100, 100, 100, 100, 100, 100, 100);
+  level3 = new Level(3, "Level Three", islandXlev3, islandYlev3, 100, 100, 100, 100, 100, 100, 100, 100);
   myBoat = new Boat(boatX, boatY);
 =======
   //myBoat = new Boat(boatX, boatY);
@@ -110,7 +110,7 @@ void showLevel() {
   textFont(font);
   textAlign(CENTER, CENTER);
   text(status, 680, 20, 100, 50);
-  String lives = "Hull: "+ 100+"%";
+  String lives = "Lives: "+ 3;
   font = createFont("helvetica.ttf", 20);
   textFont(font);
   textAlign(CENTER, CENTER);

@@ -23,8 +23,7 @@ class Level {
       } else if (level ==3) {
         if (myBoat.xpos>=0-newIsland.xpos-150 && myBoat.xpos<newIsland.xpos+200 && myBoat.ypos>=newIsland.ypos && myBoat.ypos<=newIsland.ypos+200) {
           status = "completed";
-          showText();
-          //showGameOver();
+          showGameOver();
         }
       }
     }
