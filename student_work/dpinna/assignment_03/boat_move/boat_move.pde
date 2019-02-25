@@ -1,18 +1,26 @@
 import processing.sound.*;
-PShape s, boat, island, leaves;
+PShape s, boatAnchored, sailingRight, sailingLeft, boatImage;
 PFont font;
 SoundFile file;
 SoundFile success;
-//Boat myBoat;
+Boat myBoat;
+Level level1, level2, level3;
 
-int boatX = width/2;
-int boatY = height/2;
-int boatSpeed = 50;
+
+int boatX = 100;
+int boatY = 150;
+int islandXlev1 = 550;
+int islandYlev1 = 600;
+int islandXlev2 = 200;
+int islandYlev2 = 680;
+int islandXlev3 = 300;
+int islandYlev3 = 300;
+int level = 1;
+String status = "playing";
 
 void setup() {
-  size(800, 800);
+  size(800, 800, P3D);
   smooth();
-<<<<<<< HEAD:student_work/dpinna/assignment_03/boat_move/boat_move.pde
   noCursor();
   playMusic();
 
@@ -20,75 +28,134 @@ void setup() {
   level2 = new Level(2, "Level Two", islandXlev2, islandYlev2, 100, 300, 200, 300, 400, 300, 500, 300);
   level3 = new Level(3, "Level Three", islandXlev3, islandYlev3, 50, 280, 120, 250, 180, 280, 420, 350);
   myBoat = new Boat(boatX, boatY);
-=======
-  //myBoat = new Boat(boatX, boatY);
-  file = new SoundFile(this, "sail.wav");
->>>>>>> parent of 4212160... Part 2 of the sail game.:student_work/dpinna/assignment2/boat_move/boat_move.pde
 
-  file.play();
+  boatAnchored = loadShape("boat_anchored.svg");
+  sailingRight = loadShape("boat_sailing_right.svg");
+  sailingLeft  = loadShape("boat_sailing_left.svg");
+  boatImage = boatAnchored;
 }
+
 void draw() {
 
-  background(208, 255, 255);
-  boat = loadShape("boat_color.svg");
-  island = loadShape("island.svg");
-  leaves = loadShape("leaf.svg");
+  //welcome to game screen
+  //click start to start game
+
+  if (level == 1) {
+    level1.display();
+    level1.winningScenario();
+  } else if (level == 2) {
+    level2.display();
+    level2.winningScenario();
+  } else if (level == 3) {
+    level3.display();
+    level3.winningScenario();
+  }
+
+  showLevel();
+  myBoat.move();
+  myBoat.display();
 
 
-  //island 
-  //to reach the island x>=350, y>=550;
-  noStroke();
-  fill(255, 242, 155);
-  //ellipse(600, 700, 250, 30);
-  shape(island, 470, 510);
-  
-  //myBoat.sail(boatX, boatY);
-  //myBoat.display();
-
-  //boat visualised 
-  shape(boat, boatX, boatY, 150, 150);
-  shape(leaves, 575, 470);
-  positionLogic();
-  
+  //println("X: " +myBoat.xpos);
+  //println("Y: " +myBoat.ypos);
 }
+
+
+void resetBoat() {
+  myBoat.xpos = 100;
+  myBoat.ypos = 150;
+}
+
+
 
 void showText() {
   String s = "You've reached the island!";
+  String next = "Press ENTER to progress to the next level";
   fill(250);
   font = createFont("helvetica.ttf", 32);
   textFont(font);
   textAlign(CENTER, CENTER);
   background(0);
   text(s, 270, 320, 250, 150);
+  font = createFont("helvetica.ttf", 24);
+  textFont(font);
+  text(next, 270, 460, 250, 150);
   file.stop();
-  //success = new SoundFile(this, "tada.wav");
-  //success.play(1, 0.5);// Text wraps within text box
 }
 
-
-void positionLogic() {
-  if (boatX>=350 && boatY>=550) {
-    showText();
-  }
+void showGameOver() {
+  String s = "Thanks for playing";
+  String secondLine = "Looking for Monkey Island";
+  String t = "Press TAB to restart the game";
+  fill(250);
+  font = createFont("helvetica.ttf", 32);
+  textFont(font);
+  textAlign(CENTER, CENTER);
+  background(0);
+  text(s, 170, 260, 400, 150);
+  text(secondLine, 170, 320, 400, 150);
+  font = createFont("helvetica.ttf", 24);
+  textFont(font);
+  text(t, 250, 440, 250, 150);
 }
+
 
 void keyPressed() {
   if (keyCode == LEFT) {
-    boatX = boatX - boatSpeed;
+    myBoat.moveLeft = true;
   }
 
-  if (keyCode == RIGHT) {    
-    boatX = boatX + boatSpeed;
+  if (keyCode == RIGHT) {
+    myBoat.moveRight = true;
   }
 
   if (keyCode == UP) {
-    boatY = boatY - boatSpeed;
+    myBoat.moveUp = true;
   }
 
   if (keyCode == DOWN) {
-    boatY = boatY + boatSpeed;
+    myBoat.moveDown = true;
+  }  
+  //reset the game when TAB is pressed 
+  if (keyCode == TAB) {
+    resetBoat();
+    level1.display();
+    level = 1;
   }
-<<<<<<< HEAD:student_work/dpinna/assignment_03/boat_move/boat_move.pde
+  //load level 2 
+  if (keyCode == ENTER) {
+    resetBoat();
+    if (level == 1 && status == "completed") {
+      level = 2;
+      level2.display();
+      level2.winningScenario();
+      status = "playing";
+      println("started level2");
+    } else if (level == 2 && status == "completed") {
+      level = 3;
+      level3.display();
+      level3.winningScenario();
+      status = "playing";
+      println("started level3");
+    } else if (level == 3 && status == "completed") {
+      println("Thanks for playing");
+    } else {
+      println("Insert a coin");
+    }
+  }
+}
+
+void keyReleased() {
+  if (keyCode == LEFT) {
+    myBoat.moveLeft = false;
+    //boatX = boatX - boatSpeed;
+  }
+  if (keyCode == RIGHT) {
+    myBoat.moveRight = false;
+  }
+  if (keyCode == UP) {
+    myBoat.moveUp = false;
+  }
 
   if (keyCode == DOWN) {
     myBoat.moveDown = false;
@@ -115,6 +182,4 @@ void showLevel() {
   textFont(font);
   textAlign(CENTER, CENTER);
   text(lives, 680, 45, 100, 50);
-=======
->>>>>>> parent of 4212160... Part 2 of the sail game.:student_work/dpinna/assignment2/boat_move/boat_move.pde
 }
