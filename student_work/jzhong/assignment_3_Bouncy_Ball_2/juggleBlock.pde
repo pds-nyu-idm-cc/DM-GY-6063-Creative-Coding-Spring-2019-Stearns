@@ -5,6 +5,6 @@ void juggleBlock() {
   if ((b == mouseY-r)  && (a < mouseX+2*r) && (a > mouseX-2*r) && (moveB>0) ) {
     b = mouseY;
     moveB=-moveB;
-    //score++;
+    score++;
   }
 }

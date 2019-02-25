@@ -226,7 +226,7 @@ Abstraction allows us to deal with complexity by simplifying the code that we ne
 * Arrays have a define length:
 
 ```
-int[] values = new int[12]
+int[] values = new int[12];
 ```
 
 * The code above initializes an array of integers with a length of 12.

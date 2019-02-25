@@ -36,8 +36,10 @@ This book is available for purchase in the NYU bookstore, and will be physically
 * [Sublime Text](https://www.sublimetext.com/3) - Text Editor for Developers
 
 ### Github Guides
-* [Getting Started](github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
-* [Merging Class Repository Changes](github_help/github_merging.md) - Keep your Fork and Branch up to date!
+* [Getting Started](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
+* [Keep Your Class Repo Branch Up To Date](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_merging.md) - Keep your Fork and Branch up to date!
+* [Submit Your Homework](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_homework.md) - Submitting Your Homework
+* [Class Wiki for Journaling](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_wiki.md) - Publishing your Journal to the Wiki
 
 ### Required Resources 
 
