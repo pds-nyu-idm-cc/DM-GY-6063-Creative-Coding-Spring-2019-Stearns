@@ -1,5 +1,18 @@
-//float bubbles_posY[]= bubbles_posY;
-//float bubbles_posY = 
+//float[] bubbles_posX = {50,125,200,275,350,425};
+//float[] bubbles_posY = {450};
+
+/*
+item#  x    y
+------------
+0      50   450
+1      125
+2      200
+3      275
+4      350
+5      425
+*/
+
+
 
 // 1st circle
 float circleX = 50;
