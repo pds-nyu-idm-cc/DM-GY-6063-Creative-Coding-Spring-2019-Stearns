@@ -8,7 +8,7 @@ float currt_angle= 0.0;
 float speed = 20;
 float angle_growth= 0.5;
 void setup() {
-  size(500,633);
+  size(500, 633);
   img = loadImage("vangoff.png");
   image(img, 0, 0);
   background(100);
@@ -39,23 +39,30 @@ void brush_draw(float brush_size) {
   yPos = constrain(yPos, 5, height - 5);
   currt_angle += angle_growth;
 }
+//save
+void keyPressed() {
+  if (key == 's') {
+    saveFrame("img-" + (int)random(100, 150) +".jpg");
+  }
+}
 //mouse press = stop
 void mousePressed() {
   if (!is_loop) {  // cuz is_loop cannot be !loop
     xPos = mouseX; 
     yPos = mouseY; 
     loop();
-  }
- else {hideBrush();} //just do this
+  } else {
+    hideBrush();
+  } //just do this
 }
 //void getImgColor (float x, float y, float alpha)) {
- //if (img.pixels.length=false) { img.loadPixels(); }
+//if (img.pixels.length=false) { img.loadPixels(); }
 
 //stop set
-void hideBrush(){
-for (float i=brush_size;i>0; i--) {
-  brush_draw(i);
-  draw();
-}
- noLoop();
+void hideBrush() {
+  for (float i=brush_size; i>0; i--) {
+    brush_draw(i);
+    draw();
+  }
+  noLoop();
 }
