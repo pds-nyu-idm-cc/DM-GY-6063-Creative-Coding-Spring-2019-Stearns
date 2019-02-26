@@ -43,7 +43,7 @@ void draw() {
     ellipse (ballx[i], bally[i], 2*ballr[i], 2*ballr[i]);
   } 
 
-  //1 yellow moving ball
+  //1 pink moving ball
   fill (200, 60, 100); 
   ellipse (x, y, 2*r, 2*r); 
   for (int i=0; i<20; i++) { 
