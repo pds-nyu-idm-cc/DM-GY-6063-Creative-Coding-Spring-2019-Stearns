@@ -552,4 +552,3 @@ This assignment is meant to challenge your application of your new found coding 
 2. Perform a formal analysis of the work. Basically, describe it in terms of the formal elements of art: its use of line, shape, tone, color, rhythm, texture, etc.
 3. Based on this formal analysis, approximately reproduce the work in Processing.
 4. Create a machine that automatically produces works in the style of the piece you performed your analysis on.
-5. digital color meter
