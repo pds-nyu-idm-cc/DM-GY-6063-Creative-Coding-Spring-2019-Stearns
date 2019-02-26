@@ -19,7 +19,7 @@ void setup() {
 }
 
 void draw() {
-  background(backgroundColor);
+background(backgroundColor);
   drawCircle();
 }
 
@@ -29,7 +29,6 @@ void drawCircle() {
 }
 
 void styleCircle(boolean _mouseIsOver) {
-  //_mode KEY 0 = inactive, 1 = highlighted, 2 = pressed
 
   if (_mouseIsOver) {
     // highlighted
@@ -42,9 +41,8 @@ void styleCircle(boolean _mouseIsOver) {
     stroke(circleStrokeColorInactive);
     fill(fillColorInactive);
   }
-  
 }
 
 boolean mouseIsOver() {
-  return dist(x, y, mouseX, mouseY) < size/2;
+  return (dist(x, y, mouseX, mouseY) < size/2);
 }
