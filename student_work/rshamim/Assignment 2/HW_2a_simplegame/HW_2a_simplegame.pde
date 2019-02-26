@@ -22,6 +22,8 @@ void draw (){
   background (14, 75, 39);
   stroke (0);
   
+  text (score, 50, 50);
+  
   
   //ball1
   circle (ballx, bally, 20);
@@ -108,10 +110,27 @@ void draw (){
   circle(275, 225, 7);
    
   // reach goal increase score
- if (ballx == 200)  {
-      score= score +1;  
-    }
-  
+ //if (ballx == 200)  {
+ //     score= score +1;  
+ //   }
+ 
+if ( ballx<250 && ballx>200){
+  if (bally>250 && bally<300){
+    ballx=random (0, width);
+   bally=random (0, height);
+   score=score+1;
+  }s
+if ( ball2x<300 && ball2x>250){
+  if (ball2y>250 && ball2y<300){
+    ball2x=random (0, width);
+   ball2y=random (0, height);
+   score=score+2;
+  }
+}
+
+if (score>10){
+  score=0;
+}
   
  
 }
