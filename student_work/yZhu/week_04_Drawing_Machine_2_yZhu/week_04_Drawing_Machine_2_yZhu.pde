@@ -68,3 +68,8 @@ void drawCircle(int x, int radius, int level) {
     drawCircle(x + radius/2, radius/2, level-1);
   }
 }
+
+void keyPressed() {
+  if (key == 's' || key == 'S') 
+saveFrame("#####.png");
+}

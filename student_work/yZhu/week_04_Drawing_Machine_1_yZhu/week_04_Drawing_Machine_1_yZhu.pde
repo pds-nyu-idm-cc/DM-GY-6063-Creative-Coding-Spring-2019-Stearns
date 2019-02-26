@@ -58,3 +58,8 @@ class HLine {
     line(0, ypos, width, ypos); 
   } 
 } 
+
+void keyPressed() {
+  if (key == 's' || key == 'S') 
+saveFrame("#####.png");
+}
