@@ -31,5 +31,5 @@ This course is an introductory programming class, appropriate for students with 
 ### [Class Schedule](schedule.md)
 ### [Research Presentations](research_presentation.md)
 ### [Class Resources](resources.md)
-### [Using GitHub: Getting Started](github_help/github_setup.md)
-### [Using Github: Maintaining your Fork](github_help/github_merging.md)
+### [GitHub Guides](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_help.md)
+### [Class Wiki and Journals](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/wiki)
