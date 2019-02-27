@@ -1,0 +1,4 @@
+# Alma Woodsey Thomas
+## 1891–1978
+
+<img align="right" width="50%" height="50%" src="https://s3.amazonaws.com/assets.saam.media/files/files/images/1978/SAAM-1978.40.3_1.jpg">An artist way brefore her time, Alma gained notoriety with her large, abstract shapes and bold colors that created scenic views. In her work The Eclipse, we see her technique executed beautifully. I can pinpoint immediately her use of shape for these slight;y varying rectangles that make up sun rays and color that complement each other but what really stands out is the pattern. In all of her work, shapes are aranged in a linear (or circular) fashion creating a consistency across the board. It is her use of color that make the peices take on purpose and represent the world as we see it while using such bright tones to make you feel as if the warmth is hitting your face.
