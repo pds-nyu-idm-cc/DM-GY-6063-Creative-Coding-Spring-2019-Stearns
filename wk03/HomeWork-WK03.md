@@ -25,13 +25,16 @@ I think some of the big take aways for this class come for the code modification
 There should be a lot of overlap, so pick whichever method works best for you. Don't do everything, just review, tinker with, and absorb the material.
 
 1. Explore [https://processing.org/reference/](https://processing.org/reference/) (leisurely)
+
 2. Explore the examples in File > Examples > Basics and Topics. Focus on Arrays, Control, Interaction, Motion.
+
 3. Read: Learning Processing - Ch. 5 - 6 (intently)
 4. Watch: Shiffman, Learning Processing 7 (including sub-videos) (for fun!)
 
 ### Journal Entries (2)
 
 There's a new method of keeping our journal! See [this guide](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/wiki_help/wiki_help.md) for how to clone and post your journal entries to the class wiki.
+
 
 ### Coding Assignment 2 (part 2)
 
@@ -55,4 +58,5 @@ For the more advanced coders:
 * Create classes for your game objects
 * Bonus, create a GameObject class and extend it to create your different objects.
 * Use ArrayLists to dynamically add and remove objects from play.
+
 	
