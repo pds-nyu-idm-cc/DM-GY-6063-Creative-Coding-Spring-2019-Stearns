@@ -27,6 +27,7 @@ This course is an introductory programming class, appropriate for students with 
 
 ## Helpful Links:
 
+### [Homework](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/wiki/materials)
 ### [Syllabus](syllabus.md)
 ### [Class Schedule](schedule.md)
 ### [Research Presentations](research_presentation.md)
