@@ -20,44 +20,69 @@ void setup() {
   s.endShape(CLOSE);
 }
 
+
+
 void draw() {
-  background(51);
-
-  // move the center of rotation to the center of the sketch and then re-draw
-  //https://gist.github.com/atduskgreg/1516424
-  //translate(96, 96);
-  //rotate(radians(-45));
-  //shape(s, 0, 0);
-
-
-  /*
- transform="translate(96.000000, 96.000000) 
-   rotate(-45.000000) translate(-96.000000, -96.000000)"
-   */
-
-  //// working without rectMode(CENTER);
-  //translate(width/2, height/2);
-  //rotate(radians(frameCount));
-  connector(100, 100, -45, -100, 200);
-  connector(500, 100, 45, 0, -365);
-  connector(100, 100, -135, 180, 583);
-  connector(500, 100, 135, 845, 20);
-
-  //t_shape(0, 0, 0);
+  background(77, 91, 114);
+  
+  float tr_x=mouseX, tr_y=mouseY;
+  
+  //noStroke();
+  //pushMatrix();
+  //fill(220);
+  //translate(100, 150);
+  //rotate(radians(-45));  
+  //rect(0, 0, 200, 25);
+  //rect(0, 24, 25, 45);
+  //rect(175, 24, 25, 45);
+  //rect(175, 24, 25, 45);
+  //popMatrix();
+  
+  //pushMatrix();
+  //fill(220);
+  //translate(350, 10);
+  //rotate(radians(45));  
+  //rect(0, 0, 200, 25);
+  //rect(0, 24, 25, 45);
+  //rect(175, 24, 25, 45);
+  //rect(175, 24, 25, 45);
+  //popMatrix();
+  
+  //  pushMatrix();
+  //fill(220);
+  //translate(350, 10);
+  //rotate(radians(0));  
+  //rect(0, 0, 200, 25);
+  //rect(0, 24, 25, 45);
+  //rect(175, 24, 25, 45);
+  //rect(175, 24, 25, 45);
+  //popMatrix();
+  
+  //pushMatrix();
+  //translate(10, 10);
+  //rotate(radians(0));
+  stroke(178, 164, 140);
+  strokeWeight(5);
+  fill(77, 91, 114);
+  rect(120, 120, 45, 45);
+  //fill(230);
+  //rect(50, 50, 50, 50);
+  
+  //popMatrix();
 }
 void t_shape() {
   //rotate(radians(deg));
 }
 
-void connector(int x, int y, int deg, int tr_x, int tr_y) {
-  pushMatrix();
-  translate(tr_x, tr_y);
-  fill(220);
-  noStroke();
-  rotate(radians(deg));
-  rect(x, y, 200, 25);
-  rect(x, y+24, 25, 45);
-  rect(x+175, y+24, 25, 45);
-  rect(x+175, y+24, 25, 45);
-  popMatrix();
-}
+//void drawConnector(int x, int y, int deg) {
+//  noStroke();
+//  pushMatrix();
+//  fill(220);
+//  translate(tr_x, tr_y);
+//  rotate(radians(deg));
+//  rect(0, 0, 200, 25);
+//  rect(0, 24, 25, 45);
+//  rect(175, 24, 25, 45);
+//  rect(175, 24, 25, 45);
+//  popMatrix();
+//}
