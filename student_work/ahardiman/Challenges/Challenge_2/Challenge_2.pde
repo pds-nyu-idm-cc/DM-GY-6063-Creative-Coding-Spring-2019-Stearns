@@ -18,7 +18,7 @@ void draw() {
   circle(x,y,50);
   x = x+1;
   if(x > width-20){
-    x = 20;
+    x = 20; 
   }
   
   fill(0);
@@ -27,5 +27,5 @@ void draw() {
   if(b > height-20){
     b = 20;
   }
-  
+  //how to simulate a collision
 }
