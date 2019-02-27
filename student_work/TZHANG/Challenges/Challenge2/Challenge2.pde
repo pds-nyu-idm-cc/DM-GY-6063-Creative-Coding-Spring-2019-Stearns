@@ -1,3 +1,4 @@
+//just started on this, not yet finished. Very basic.
 class Ball{
    PVector position;
    PVector velocity;
