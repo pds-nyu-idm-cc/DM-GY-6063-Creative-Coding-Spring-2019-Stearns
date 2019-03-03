@@ -4,8 +4,9 @@
 ## Schedule Overview
 ### This schedule is subject to change at any time. Check back regularly!
 
+
+
 <table>
-	
 	<tr>
 		<th width="10%">
 			Wk
@@ -281,5 +282,6 @@
 			<li><strong><em><a href = "Final_Deliverables.md">Final Deliverables Due Monday May 13th!!</a></em></strong></li>
 		</td>
 	</tr>
-
 </table>
+
+
