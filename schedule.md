@@ -5,7 +5,7 @@
 ### This schedule is subject to change at any time. Check back regularly!
 
 
-<table></table>
+<table>
 	<tr>
 		<th width="10%">
 			Wk
@@ -15,8 +15,8 @@
 		</th> 
 		<th width="45%">
 			Do For Homework<br>
-			(Assigned on Date Listed and due the following week <u>before</u> class)
-		</th> 
+			(Assigned on Date Listed and due the following week <em>before</em> class)
+		</th>
 	</tr>
 
 	<tr>
@@ -32,7 +32,7 @@
 			Challenge 01
 		</td>
 		<td valign = "top">
-	 		<li>Go through the <a href="https://processing.org/tutorials/">tutorials on Processing.org</a> and explore the examples in <code>File > Examples > Basics</code>.</li>
+	 		<li>Go through the <a href="https://processing.org/tutorials/">tutorials on Processing.org</a> and explore the examples in <code>File - Examples - Basics</code>.</li>
 			<li>Read: Learning Processing - Ch. 1 - 2</li>
 			<li>Watch: <a href="https://www.youtube.com/user/shiffman/playlists?view=50&sort=dd&shelf_id=2">Shiffman, Learning Processing 1-4 (including sub-videos, ie, 4.4, 4.6)</a></li>
 			<li>Assignment 01</li>
