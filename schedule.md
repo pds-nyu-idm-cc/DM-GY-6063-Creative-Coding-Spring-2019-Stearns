@@ -5,8 +5,7 @@
 ### This schedule is subject to change at any time. Check back regularly!
 
 
-
-<table>
+<table></table>
 	<tr>
 		<th width="10%">
 			Wk
