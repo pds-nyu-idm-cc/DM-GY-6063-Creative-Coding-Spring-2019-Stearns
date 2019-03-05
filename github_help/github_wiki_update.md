@@ -20,7 +20,7 @@ It's fairly simple.
 
 ![](images/20-push.png)
 
--
+---
 
 # THAT'S IT!
 
