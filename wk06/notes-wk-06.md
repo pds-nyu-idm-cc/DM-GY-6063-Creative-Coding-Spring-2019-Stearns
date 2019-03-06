@@ -129,6 +129,7 @@ If you're working locally, start from step 3 above.
 ## In-Class Challenge
 
 Translate code from last week's challenges into P5.js
+Hint: [Transition Notes](https://github.com/processing/p5.js/wiki/Transitioning-from-Processing)
 
 1. Toggle Button
 2. Moving Button that "collides" with walls.

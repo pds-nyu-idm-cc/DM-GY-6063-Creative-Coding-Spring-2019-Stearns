@@ -13,7 +13,11 @@ function setup() {
 
 function draw() {
   background(220);
+
+  circle_x = mouseX;
+  circle_y = mouseY;
+
   stroke(circle_s);
-  fill(circle_g);
+  fill(circle_f);
   circle(circle_x, circle_y, circle_d);
 }
