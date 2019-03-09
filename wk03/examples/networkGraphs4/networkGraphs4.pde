@@ -1,3 +1,8 @@
+// Expands on previous example by introducing classes
+// Instead of having a bunch of arrays that hold the features of  a "Node",
+// We define a class describes a group of objects.
+// In this case, our class Node dscribes a group of Node objects.
+
 // draw lots of nodes
 int qtyNodes = 250;
 // draw lines if shorter than
