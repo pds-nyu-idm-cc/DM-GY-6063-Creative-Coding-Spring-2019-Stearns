@@ -1,21 +1,23 @@
 class Button {
-  float x, y;
-  float dx, dy, targetX = width/2, targetY=125, easing = 0.05;
+  float x, y, x2, y2;
+  float dx, dy, targetX, targetY, easing = 0.08;
   color c;
   String s;
-  
+
   Button(float newX, float newY, color newC, String newS) {
     x = newX;
     y = newY;
     c = newC;
     s = newS;
+    x2 = newX;
+    y2 = newY;
     //loop();
   }
 
   void display() {
     stroke(0);
     fill(c);
-    ellipse(x, y , 60, 60);
+    ellipse(x, y, 66, 66);
     textAlign(CENTER);
     textSize(10);
     fill(0);
@@ -23,17 +25,28 @@ class Button {
   }
 
   void choose() {
-    
-    //dx = targetX - x;
-    //x += dx * easing;
-    
-    //dy = targetY - y;
-    //y += dy * easing;
-    
-    x = targetX; y = targetY;
+    targetX = width/2;
+    targetY = 125;
+
+    dx = targetX - x;
+    x += dx * easing;
+
+    dy = targetY - y;
+    y += dy * easing;
 
 
-    println("X: "+targetX+", Y: "+targetY);  
-    println("dx: "+dx+", dy: "+dy);
+    //println("X: "+targetX+", Y: "+targetY);  
+    //println("dx: "+dx+", dy: "+dy);
+  }
+
+  void reset() {
+    targetX = x2;
+    targetY = y2;
+
+    dx = targetX - x;
+    x += dx * easing;
+
+    dy = targetY - y;
+    y += dy * easing;
   }
 }
