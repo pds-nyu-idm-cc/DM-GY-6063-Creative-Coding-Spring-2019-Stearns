@@ -1,8 +1,6 @@
 // Sketch by Purin Phanichphant
 // http://purin.co/Experiments-with-P5-js
 
-
-
 // All the paths
 var paths = [];
 // Are we painting?

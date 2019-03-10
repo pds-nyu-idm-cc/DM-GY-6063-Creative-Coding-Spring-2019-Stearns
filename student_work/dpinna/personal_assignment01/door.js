@@ -45,7 +45,6 @@ function draw() {
   } else {
     quad(100, 0, 200, 0, 200, 200, 100, 200);
   }
-
 }
 
 function mouseDragged() {
