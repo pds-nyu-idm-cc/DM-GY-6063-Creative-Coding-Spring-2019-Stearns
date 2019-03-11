@@ -47,10 +47,6 @@ void draw() {
   }
   
   speed.mult(dampening);
-
-  //// wrap around the screen
-  //x = (x + width) % width;
-  //y = (y + height) % height;
   
   fill(speed.mag()*25);
   

@@ -7,9 +7,9 @@ float speed_x = 6;
 float speed_y = 3;
 
 // acceleration due to gravity
-float gravity = 1;
+float gravity = 0;
 
-float dampening = .99;
+float dampening = 1;
 
 float size = 50;
 
@@ -39,7 +39,7 @@ void draw() {
     speed_x *= -1;
   }
   if (x < size/2) {
-    x = 0;
+    x = size/2;
     speed_x *= -1;
   }
 
@@ -48,16 +48,17 @@ void draw() {
     speed_y *= -1;
   }
   if (y < size/2) {
-    y = 0;
+    y = size/2;
     speed_y *= -1;
   }
   
   speed_x *= dampening;
   speed_y *= dampening;
 
-  //// wrap around the screen
-  //x = (x + width) % width;
-  //y = (y + height) % height;
-
   circle(x, y, size);
+}
+
+void mousePressed(){
+  speed_x = random(-10,10);
+  speed_y = random(-10,-5);
 }

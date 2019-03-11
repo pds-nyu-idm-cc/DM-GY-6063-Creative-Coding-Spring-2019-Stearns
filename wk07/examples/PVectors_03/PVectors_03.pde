@@ -12,10 +12,10 @@ void setup() {
   size(500, 500);
   background(127);
 
-  // place the ball in the center of our screen
+  // place the ball in the center of the screen
   position = new PVector(width/2, height/2);
-  randomizeSpeed();
-  acceleration = new PVector(0, gravity);
+  speed = new PVector();
+  acceleration = new PVector();
 }
 
 void draw() {
@@ -52,10 +52,6 @@ void draw() {
   }
   
   speed.mult(dampening);
-
-  //// wrap around the screen
-  //x = (x + width) % width;
-  //y = (y + height) % height;
   
   fill(speed.mag()*25);
   
@@ -63,10 +59,10 @@ void draw() {
 }
 
 void mousePressed(){
-  randomizeSpeed();
+  pushAway();
 }
 
-void randomizeSpeed(){
-  speed = PVector.random2D();
+void pushAway(){
+  speed = PVector.sub(position, new PVector(mouseX,mouseY));
   speed.mult(10);
 }
