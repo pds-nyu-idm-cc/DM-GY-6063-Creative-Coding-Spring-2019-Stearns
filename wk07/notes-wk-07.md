@@ -90,7 +90,7 @@ One of the most basic examples of creating Glitch Art involves opening an image 
 
 ### Automated File Corruption
 
-* []()
+* [imageGlitcher.pde](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/wk07/examples/imageGlitcher/imageGlitcher.pde)
 
 In addition to copying and pasting chunks of raw image data, it's possible to use the find and replace feature of many text editors to alter the image data byte by byte. This effect as a far more drastic impact as it's changing a large percentage of data.
 
@@ -99,3 +99,331 @@ In addition to copying and pasting chunks of raw image data, it's possible to us
 ![](images/header_remix.png)
 
 If you wish to target specific parts of a JPG. Ted Davis created [Header Remix](http://www.ffd8.org/header_remix/) an interactive application that you can use to single out and alter bits one value at a time.
+
+## PVectors and ArrayLists
+
+### Motion
+
+![](images/velocity.jpg)
+
+#### Review Coordinates
+
+In Processing, location is in reference to a coordinate system whose unit is the pixel.
+
+![](images/coordinates.svg)
+
+We define the location in terms of (x, y) coordinates from the origin, which is the upper left corner of the screen.
+
+#### Review Speed
+
+![](images/uniform-motion.png)
+
+When we deal with motion, we're dealing with a change in position per unit time.
+
+* In Processing, our unit is the frame.
+* Each frame, we want to move some amount.
+	* If we want to move in the x-axis, we increment x by some amount
+	* If we want to move in the y-axis, we increment y by some amount
+	* If we want to move diagonally, we do both together
+
+#### Velocity as a Vector
+
+![](images/velocity_vector.jpg)
+
+Vectors are a representation of some magnitude (velocity, acceleration, force, etc) in some direction. In cartesian coordinates, like our pixel matrix in Processing, vectors can be broken down into x and y components.
+
+In the above diagram, vector *v* is represented by *vx* and *vy*, vectors in the x and y directions respectively. They **add** to form vector *v*.
+
+### PVectors
+
+In Processing, the **PVector** class allows us to do vector math easily, a necessary tool for creating dynamic motion.
+
+It has fields that stores coordinates in up to 3 dimensions. We'll deal with 2 for now.
+
+#### Position as a PVector
+
+PVectors can be used to store position as x and y coordinates. Consider the example:
+
+```
+PVector position;
+
+void setup(){
+
+	size(500,500);
+	position = new PVector(width/2, height/2);
+	noLoop();
+	
+}
+
+void draw(){
+
+	circle(position.x, position.y, 50);
+	println("x: "+position.x+", y: "+position.y);
+}
+
+
+```
+
+#### Motion with PVectors
+
+![](images/vector_addition.gif)
+
+To create motion, we increment the position by some x and y component, whether positive or negative in value. We can represent the velocity of an object by specifying the amount we want it to move in the x and y directions and store those in a PVector.
+
+In order to change the position and create motion, we add the speed vector to the position vector.
+
+```
+PVector position;
+PVector velocity;
+
+float size = 50;
+
+void setup() {
+  size(500, 500);
+  
+  position = new PVector(width/2, height/2);
+  velocity = new PVector(random(-3,3),random(-3,3));
+}
+
+void draw() {
+
+  background(127);
+
+  // add the velocity vector to the position
+  position.add(velocity);
+  
+  // collide with edges
+  bounce();
+
+  circle(position.x, position.y, size);
+  
+}
+
+void bounce(){
+if ( position.x > width-(size/2) ) {
+    position.x = width-(size/2);
+    velocity.x *= -1;
+  }
+  if (position.x < size/2) {
+    position.x = size/2;
+    velocity.x *= -1;
+  }
+
+  if ( position.y > height-(size/2) ) {
+    position.y = height-(size/2);
+    velocity.y *= -1;
+  }
+  if (position.y < size/2) {
+    position.y = size/2;
+    velocity.y *= -1;
+  }
+
+}
+
+```
+
+#### Acceleration and Forces
+
+![](images/blackhole.jpg)
+
+Velocity is the change we apply to position each frame.
+
+Acceleration is the change we apply to velocity each frame.
+
+```
+velocity.add(acceleration);
+position.add(velocity);
+
+```
+We can specify the magnitude of acceleration and its direction to create an effect like gravity.
+
+```
+acceleration = new PVector(0, 1);
+velocity.add(acceleration);
+position.add(velocity);
+
+```
+
+We can calculate acceleration using a familiar equation:
+
+```
+force = mass * acceleration
+
+or
+
+acceleration = force / mass
+```
+
+If we're dealing with vectors, force can be specified as a vector.
+
+```
+PVector force = new PVector(x, y);
+acceleration.add(force.div(mass));
+velocity.add(acceleration);
+position.add(velocity);
+```
+
+#### Subtraction
+
+![](images/subtraction.png)
+
+When we want to create a vector that points from one object to another, we use vector subtraction.
+
+* `PVector.sub(position1, position2);` will return a `PVector` that points from `position2` towards `position1` whose magnitude is the distance between them.
+
+We can also simply calculate the distance using the `PVector.dist()` method
+
+#### Scalars and Vectors
+
+We can multiply a vector by a one-dimensional value or a scalar. The math is done to the magnitude of the vector and does not impact its direction.
+
+Processing has a few ways for us to manipulate the magnitude of PVectors:
+
+```
+.mult()
+.div()
+.setMag()
+.limit()
+```
+
+#### Examples:
+
+* Motion without PVectors
+* Motion with PVectors
+* Accelerated motion with PVectors
+
+### From Individuals to Arrays to Instances
+
+A singular object can be described in terms of its attributes. A circle has an x and y location as well as a diameter, perhaps a color, maybe even some mass. If it moves it'll have velocity with x and y components.
+
+```
+// describe a circle?
+float x;
+float y;
+float speedX;
+float speedY;
+float mass;
+float diameter;
+
+```
+This is fine if we're just dealing with one and we know that we're just testing something out, but just like functions allow us to compartmentalize and modularize our code, classes let us create a template for objects we're going to use in different places and in different ways.
+
+#### Classes, Objects and Instances
+
+The concept is simple. Classes are a description of an object. When we use a class in our code, we create an instance of the object it describes.
+
+* Objects have attributes or properties and behaviors
+* Classes are descriptions of object properties and behaviors
+* Instances are specific objects created in our code
+
+In Java, as with other Object Oriented Programming languages, classes describe objects that share a common set of properties and behaviors.
+
+* Properties are called **fields** and are *variables* that contain data specific to an object.
+* Behaviors are called **methods** and are *functions* that perform tasks specific to an object.
+* Objects are **defined**  or described by classes.
+* Objects are **instantiated** similar to declaring a variable.
+* Objects must be initialized using **constructors**, special functions that determine the initial value of fields.
+
+```
+// definition of a class
+
+class Object{
+
+	// fields
+	float field;
+	
+	// constructor
+	Object(){
+		field = 0;
+	}
+	
+	// methods
+	void method(){
+	}
+	
+}
+
+// creating an instance of an object of class Object named object
+
+Object object;
+
+// initializing the instance of class Object named object
+
+object = new Object();
+
+// accessing fields
+
+float someVar = object.field;
+object.field = someVar;
+
+// calling methods
+
+object.method();
+```
+
+### Arrays
+
+Arrays can hold instances of objects of a single class in a single array.
+
+We can then iterate through an array and make changes to various fields and call methods to make changes to all the instances at once. If we only want to update certain instances, we can create if statements to apply certain actions to only instances we want to change.
+
+```
+// declare an array of OurClass objects named "ourArray"
+OurClass[] ourArray = new OurClass[howMany];
+
+// create instances of OurClass objects and stuff them into the array
+for(int i = 0; i < ourArray.length; i++){
+	// create an instance of OurClass using the default constructor
+	ourArray[i] = new OurClass();
+}
+
+// iterating through the array and executing a method on each element
+for(int i = 0; i < ourArray.length; i++){
+	ourArray[i].someMethod();
+}
+
+```
+
+
+### ArrayLists
+
+ArrayLists are dynamic structures that allow us to add and remove instances. This gives us the ability to scale up and down the number of object instances that are active in our code at different times.
+
+```
+// declare an ArrayList of type OurClass, with the name "ourList"
+ArrayList<OurClass> ourList;
+
+// creates an empty ArrayList of type OurClass
+ourList = new ArrayList<OurClass>();
+
+// adding OurClass instances
+for(int i = 0 ; i < 100 ; i++){
+	// we use the OurClass() constructor to create an instance of OurClass
+	ourList.add( new OurClass() );
+}
+
+// long form iterating through (NOT REMOVING ANYTHING)
+for (int i = 0; i < ourList.size() ; i++ ){
+	OurClass o = ourList.get(i);
+	o.someMethod();
+}
+
+// short form iterating through 
+for ( OurClass o : ourList){
+	o.someMethod();
+}
+
+// when we need to remove something
+for(int i = ourList.size() - 1 ; i >= 0 ; i--){
+	OurClass o = ourList.get(i);
+	if(o.isDone()){
+		ourList.remove(i);
+	}
+}
+```
+
+#### Examples
+
+* Creating a Mover class from the PVector examples
+* Using Arrays
+* Using ArrayLists
