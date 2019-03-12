@@ -288,9 +288,9 @@ Processing has a few ways for us to manipulate the magnitude of PVectors:
 
 #### Examples:
 
-* Motion without PVectors
-* Motion with PVectors
-* Accelerated motion with PVectors
+* [Motion without PVectors](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/wk07/examples/PVectors/PVectors_01/PVectors_01.pde)
+* [Motion with PVectors](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/wk07/examples/PVectors/PVectors_02/PVectors_02.pde)
+* [Accelerated motion with PVectors](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk07/examples/PVectors/PVectors_03)
 
 ### From Individuals to Arrays to Instances
 
@@ -424,6 +424,6 @@ for(int i = ourList.size() - 1 ; i >= 0 ; i--){
 
 #### Examples
 
-* Creating a Mover class from the PVector examples
-* Using Arrays
-* Using ArrayLists
+* [Creating a Mover class from the PVector examples](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk07/examples/PVectors/PVectors_04)
+* [Using Arrays](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk07/examples/PVectors/PVectors_05)
+* [Using ArrayLists](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk07/examples/PVectors/PVectors_06)
