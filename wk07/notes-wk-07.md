@@ -74,7 +74,11 @@ Starting with the web editor is a quick and intuitive way to start coding and te
 
 ![](images/webeditor-edit.png)
 
+<<<<<<< HEAD
+Rosa Menkman published [A Vernacular of File Formats](https://www.dropbox.com/s/r2an9biuttqpx0c/hifi%20Rosa%20Menkman%20-%20A%20Vernacular%20of%20File%20Formats.pdf?dl=0) a PDF detailing her exploration of file formats undergoing various types of corruption.
+=======
 **3.** Save the sketch:
+>>>>>>> parent of 545d39b... glitches
 
 ![](images/webeditor-save.png)
 
@@ -92,6 +96,17 @@ You can feel free to download this to where you work on your Processing assignme
 
 ![](images/index.png)
 
+<<<<<<< HEAD
+* []()
+
+In addition to copying and pasting chunks of raw image data, it's possible to use the find and replace feature of many text editors to alter the image data byte by byte. This effect as a far more drastic impact as it's changing a large percentage of data.
+
+### Anatomy of a JPG
+
+![](images/header_remix.png)
+
+If you wish to target specific parts of a JPG. Ted Davis created [Header Remix](http://www.ffd8.org/header_remix/) an interactive application that you can use to single out and alter bits one value at a time.
+=======
 This html file is a lot more stripped down and references only the .min.js p5.js library files.
 
 **7.** Have a look at the script.js file in Sublime Text 3
@@ -206,3 +221,4 @@ object.method();
 Submit your 1-page description of your project and begin work gathering materials, identifying examples from within Processing and online that might help you. When you discover something, when you have an idea, write a Journal Entry for it!
 
 I'd like to see at least 3 Project related posts concerning the above, plus Processing or P5.js sketches that have outlines and comments indicating how you are planning your project.
+>>>>>>> parent of 545d39b... glitches
