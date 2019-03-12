@@ -1,102 +1,95 @@
-# Week 06
+# Week 07
 
 ## Agenda
 
-* Review Projects
-* P5.js
-* In Class Challenge
-* Research Presentation
-* Group Ideation Session: Mid Term Project
-* Anatomy of a class
+* Midterm Code Therapy Session ;)
+* Glitch Art
+* Pixel Sorting
+* PVectors and ArrayLists
+* Iris Chen's Presentation
 
-## Project Review
+## Midterm Code Therapy (30 mins)
 
-### Impossible UI
+* Break into groups of three
+* Discuss your projects
+* Share your code samples
+* Talk about challenges you're facing
 
-You were given an open ended assignment to extend the exercises from the in-class challenges to either a game or artwork (or art game) format. The prompts were:
+## Class Feedback (30 mins)
 
-* Envision a future device that can do anything you want. What does it do?
-* Imagine the different functions and features and build the User Interface (UI) for it using out new found button building skills.
-* We know how to move things around and make things happen when things are clicked, let's put them to use!
-* When buttons are clicked, make the UI responsive. Does text appear? Does the screen change? Color and shape of the buttons?
+* Pose a question to the class
+* Get feedback on your project or a problem
+* Need guidance for next steps?
 
-Inspirations posted [here](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/wk05/HomeWork-WK05.md) included a game called Spaceteam and an artist Rafael Rozendaal.
+## Glitch Art (at a glance)
 
-Let's see what everyone came up with!
+An art of artifacts? What is a glitch? What drove artists to work with what seem like errors?
 
-## P5.js
+The topic of Glitch Art is sprawling and cannot be adequately covered in depth in a single class. This is meant to provide a starting point for aesthetic exploration of coding principles starting from an unlikely place, but perhaps a familiar one, where things break and fail.
 
-There was a lot of material to review for this, but I want to make sure we're clear on how to work with P5.js for our class.
+### Origins?
 
-### Working with P5.js locally
+Artists have long ben working with notions of failure and artifacts particular to the materials they work with. This is not really what makes Glitch Art unique. Kim Cascone's Perspective is instructive, that Glitch Art, like Glitch Music, or the turn towards the failures inherent to digital tools and media, is a Post-Digital form. That is, what distinguishes Glitch Art from other forms of art that are concerned with material artifacts, failure, or noise is that inherently grapples with how these manifest in digital tools, systems, and material.
 
-I'm going to presume that everyone spent some time on the site, starting with the [getting started guide](https://p5js.org/get-started/), on to downloading [P5.js complete locally](https://p5js.org/download/), and digging around in the [empty-example]() folder. Yes, I downloaded and included the [P5.js complete package in the class repo](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/p5).
+![](images/ant_scott.png)
 
-You basically have 3 components you will always need to account for:
+[Ant Scott](http://www.beflix.com), AKA Beflix
 
-1. An html file that loads all the scripts and runs the p5.js sketch in a web browser
-2. The P5.js libraries, you just need to know where these are and how to tell your html files where to find them.
-3. Your javascript files. `script.js` by default. This is the code for your sketch.
+>Ant Scott (UK, 1971 –) is a glitch artist, who in 2001 coined the term "Glitch Art", created the first website devoted to visual glitches [1] and presented at the first international glitch-themed conference, held in Oslo the following year [2]. He edited the first coffee table book on glitch aesthetics [3]. 
 
-### Editing HTML and JavaScript
+### Glitch Music
 
-First thing we need is a decent text editor to edit our files. I recommend using [Sublime Text 3](https://www.sublimetext.com/3) for this class. For you 1337 web dev types, you can use whatever editor or IDE you wish.
+>Glitch is a genre of electronic music that emerged in the 1990s. It has been described as a genre that adheres to an "aesthetic of failure," where the deliberate use of glitch-based audio media, and other sonic artifacts, is a central concern.[1] 
 
-This is the index.html file from the empty P5.js example:
+[Kim Cascone](https://en.wikipedia.org/wiki/Kim_Cascone)
 
-![](images/html-basic.png)
+The Aesthetics of Failure, by Kim Cascone was published in the Computer Music Journal Volume 24 | Issue 4 | Winter 2000 p.12-18.
 
-It's simple enough. All of our script tags are within the head tag.
+In this work he contextualizes the emergence of what he identifies as a Post-Digital aesthetic in electronic music as a confluence of ideas in past art historic and experimental music traditions concerned with failure, chance, and background.
 
-```
-<!-- p5.js libraries -->
-<script src="../p5.min.js"></script>
-<script src="../addons/p5.dom.min.js"></script>
-<script src="../addons/p5.sound.min.js"></script>
+The emergence of a music that embraces the unique qualities of a material as it decays or is acted upon physically forms the basis for much of what was known as Glitch Music. Artists releasing these albums worked with visual artist for their cover art. Many of these artists were the original Glitch Artists, Ant Scott amongst them.
 
-<!-- p5.js sketch code -->
-<script src="sketch.js"></script>
-```
+### Art of Glitch
 
-P5.js is a javascript library. When we use functions from that library in our own scripts, we are making references to the functions that are inside the P5.js library.
+![](images/glitch-designing-imperfection.jpg)
 
-We need to make sure these scripts are loaded. If the path to the scripts is incorrect, the scripts won't load. 
+Iman Moradi co-authored and edited [Glitch: Designing Imperfection](https://www.amazon.com/gp/product/0979966663/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0), with Ant Scott and Christopher Murphy (published in 2009 by Mark Batty Publishers). The first coffee table on Glitch Art, Designing Imperfection documented the beginnings of glitch art through images and interviews with many of the key pioneering figures.
 
-So which scripts do we use? How do we work on and submit our assignments?
+### GLI.TC/H
 
-### Web Editor
+![](images/post2112_logo.gif)
 
-Starting with the web editor is a quick and intuitive way to start coding and testing things out in P5.js provided you have internet access. It also provides us with a good template for how to work with P5.js locally when we're offline.
+An festival that took place in 2010, 2011, and 2012
 
-**1.** Head on over to the [Web Editor](https://editor.p5js.org/) and sign up for an account using your nyu.edu email address.
+Organized by a core group that included Nick Briz, Rosa Menkman and Jon Satrom, and Evan Meaney. It started in Chicago, IL, expanding to Amsterdam, NL and Birmingham, UK in 2011, and returning to Chicago in 2012.
 
-**2.** Edit your first sketch:
+### Vernacular of File Formats
 
-![](images/webeditor-edit.png)
+![](images/Rosa-Menkman.jpg)
 
-<<<<<<< HEAD
 Rosa Menkman published [A Vernacular of File Formats](https://www.dropbox.com/s/r2an9biuttqpx0c/hifi%20Rosa%20Menkman%20-%20A%20Vernacular%20of%20File%20Formats.pdf?dl=0) a PDF detailing her exploration of file formats undergoing various types of corruption.
-=======
-**3.** Save the sketch:
->>>>>>> parent of 545d39b... glitches
 
-![](images/webeditor-save.png)
+Glitches are inherently unstable things implicating an ecosystem of structures and systems:
 
-**4.** Download it:
+* The File Format and Structure
+* Physical Media
+* Rendering Software
+* The Operating System
+* Transmission Format and Method
+* Display Hardware
 
-![](images/webeditor-download.png)
+Much of the work of Glitch Artists has been in destabilizing any one of these and capturing the output.
 
-You can feel free to download this to where you work on your Processing assignments or right into your `student_work` folder.
+One of the most basic examples of creating Glitch Art involves opening an image in a text editor, copying and pasting the text, and then saving it as an image again:
 
-**5.** Unzip it and Have a look inside the folder:
+![](images/kitten.png)
 
-![](images/webproject.png)
+![](images/kitten_text.png)
 
-**6.** Checkout the index.html file in Sublime Text 3
+![](images/kitten_glitch.png)
 
-![](images/index.png)
+### Automated File Corruption
 
-<<<<<<< HEAD
 * []()
 
 In addition to copying and pasting chunks of raw image data, it's possible to use the find and replace feature of many text editors to alter the image data byte by byte. This effect as a far more drastic impact as it's changing a large percentage of data.
@@ -106,119 +99,3 @@ In addition to copying and pasting chunks of raw image data, it's possible to us
 ![](images/header_remix.png)
 
 If you wish to target specific parts of a JPG. Ted Davis created [Header Remix](http://www.ffd8.org/header_remix/) an interactive application that you can use to single out and alter bits one value at a time.
-=======
-This html file is a lot more stripped down and references only the .min.js p5.js library files.
-
-**7.** Have a look at the script.js file in Sublime Text 3
-
-![](images/script.png)
-
-Look familiar? This is the code we entered in the editor window.
-
-### Working Locally
-
-We can start a new sketch in the **WebEditor** and download it to use as our template for all future projects:
-
-![](images/template.png)
-
-When starting from scratch, locally, we can duplicate this folder, change the name, and edit to our heart's content.
-
-We then would work with a split screen setup: browser on one side of the screen, editor on the other:
-
-![](images/editing.png)
-
-Make changes to the code. Refresh your browser. If you need to see errors for debugging, your browsers developer tools will provide you with info similar to what the IDE and WebEditor but it might not be as precise and require advanced knowledge. Proceed with Caution.
-
-
-### Submitting Homework
-
-If you're working from the WebEditor:
-
-1. Save and download your work locally
-2. Unzip and change the folder name to match the assignment number
-3. Drag and drop that folder into your `student_work` folder
-4. Go to the desktop GitHub app and fetch, commit, push, create pull request.
-
-If you're working locally, start from step 3 above.
-
-## In-Class Challenge
-
-Translate code from last week's challenges into P5.js
-Hint: [Transition Notes](https://github.com/processing/p5.js/wiki/Transitioning-from-Processing)
-
-1. Toggle Button
-2. Moving Button that "collides" with walls.
-3. Randomization, when button is toggled, randomly change something about the sketch.
-
-## Research Presentation
-
-Jude presents 2 from the following:
-
-* Robert Hodgin Flight404
-* Lauren McCarthy
-* Cedric Keifer
-
-## Group Ideation Session: Mid Term Project
-
-1. Let's take a moment to think about what we want to do, what we want to make. Is there a problem, whether technical, aesthetic, personal, social that you would like to work on using what we've learned so far. It doesn't have to be big, and it doesn't have to stray far from the two themes we keep coming back to: Game or Art. Write down at least 3 things you want to do, make, create.
-
-2. Of the three ideas, let's share the most important one with the group. Identify how you might approach representing, researching/exploring or solving the problem, ask others for suggestions, offer suggestions.
-
-3. Based on this feedback, try to simplify your formulation of the problem. What elements will you need to bring in. What research do you need to do. What materials do you need to gather. What techniques do you need to learn?
-
-4. Put together a 1-page write up describing your mid-term project based on the above.
-
-
-## Review of Classes
-
-In Java, as with other Object Oriented Programming languages, classes describe objects that share a common set of properties and behaviors.
-
-* Properties are called **fields** and are *variables* that contain data specific to an object.
-* Behaviors are called **methods** and are *functions* that perform tasks specific to an object.
-* Objects are **defined**  or described by classes.
-* Objects are **instantiated** similar to declaring a variable.
-* Objects must be initialized using **constructors**, special functions that determine the initial value of fields.
-
-```
-// definition of a class
-
-class Object{
-
-	// fields
-	float field;
-	
-	// constructor
-	Object(){
-		field = 0;
-	}
-	
-	// methods
-	void method(){
-	}
-	
-}
-
-// creating an instance of an object of class Object named object
-
-Object object;
-
-// initializing the instance of class Object named object
-
-object = new Object();
-
-// accessing fields
-
-float someVar = object.field;
-object.field = someVar;
-
-// calling methods
-
-object.method();
-```
-
-## Homework: Mid-Term Projects 
-
-Submit your 1-page description of your project and begin work gathering materials, identifying examples from within Processing and online that might help you. When you discover something, when you have an idea, write a Journal Entry for it!
-
-I'd like to see at least 3 Project related posts concerning the above, plus Processing or P5.js sketches that have outlines and comments indicating how you are planning your project.
->>>>>>> parent of 545d39b... glitches
