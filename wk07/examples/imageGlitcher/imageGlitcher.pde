@@ -6,12 +6,12 @@ String fileName;
 String extension;
 
 // we can speficy a range of bytes to replace
-int find_min=0xAB;
-int find_max=0xAB;
+int find_min=200;
+int find_max=201;
 
 // and a range of bytes to replace with
-int replace_min=0x00;
-int replace_max=0xff;
+int replace_min=2;
+int replace_max=5;
 
 /////////////////////////////////////////////////////////
 // setup
@@ -19,11 +19,6 @@ int replace_max=0xff;
 void setup() {
   
   size(10, 10);
-  background(0);
-
-  if (frame != null) {
-    surface.setResizable(true);
-  }
 
   srcPath = new String();
   desPath = new String();
