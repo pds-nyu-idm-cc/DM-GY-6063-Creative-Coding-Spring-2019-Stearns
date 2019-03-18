@@ -23,7 +23,7 @@ void draw() {
 
   // add acceleration due to gravity to the speed_y
   speed.add(acceleration);
-
+  speed.limit(25);
   // add the speed value to the position
   position.add(speed);
 
@@ -59,5 +59,5 @@ void mousePressed(){
 
 void randomizeSpeed(){
   speed = PVector.random2D();
-  speed.mult(10);
+  speed.mult(100);
 }

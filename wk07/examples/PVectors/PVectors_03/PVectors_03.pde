@@ -23,8 +23,8 @@ void draw() {
   //background(127);
   
   acceleration = PVector.sub(position, new PVector(mouseX, mouseY));
-  acceleration.setMag(-0.5);
-  // add acceleration due to gravity to the speed_y
+  acceleration.setMag(0.5);
+
   
   speed.add(acceleration);
   speed.limit(10);
