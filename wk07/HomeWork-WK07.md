@@ -52,7 +52,7 @@ You need to:
 3. Come to me for conceptual and project management advice/guidance.
 4. Make use of the TA for technical.
 
-###How am I evaluating the Projects?
+### How am I evaluating the Projects?
 
 Does the project have a clearly defined goal?
 
