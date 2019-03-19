@@ -13,6 +13,8 @@ function setup() {
 
 function draw() {
 
+  camera(0,0,0)
+
   //inside
   fill('#D8D8D8');
   rect(0, 0, 100, 200);
