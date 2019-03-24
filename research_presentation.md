@@ -2,8 +2,9 @@
 
 When working for a client or for yourself as part of your independent creative practice, research will play an important role in any project from the very beginning. Whether developing an idea or pitching a developed project, you'll need to have a grasp on how your work relates to the broader field and how to communicate your ideas to others by giving context through citing similar work.
 
-You will be assigned two subjects: a group, project, artist, or designer. Prepare a presentation to deliver to your classmates. Time your presentation to be 5-7 minutes long. Include *3-4 visual examples of each subject work* and address the following: 
+You will be assigned two subjects: a group, project, artist, or designer. Prepare a presentation to deliver to your classmates. Time your presentation to be 10-15 minutes long. Include *3-4 visual examples of each subject work* and address the following: 
 
+* General overview of your subject.
 * What is original/unique about how this artist uses technology? 
 * What kind of code did the artist use? (JavaScript? Flash? Procesing? openFrameworks? VVVV? Python?) How are they using the code? What is the code achieving?
 * Why is it necessary that the artist use code? (ie: particularly if it’s non-interactive, could it have been achieved with traditional or linear media?)
@@ -24,6 +25,13 @@ You will be assigned two subjects: a group, project, artist, or designer. Prepar
 
 #### Show and Tell People
 
+This was generated using the sketch at [presentationAssignments/presentationAssignments.pde](presentationAssignments/presentationAssignments.pde).
+
+Pick two of the three subjects assigned to you. Your presentation should give each equal time. Share images, examples of the work, and anything else that relates to the subjects.
+
+![](presentationAssignments/presentationAssignments.png)
+
+<!--
 Week|	Subject						|	Presenter
 ---	|---								|---
 3	|	Casey Reas, Ben Fry			|
@@ -44,3 +52,4 @@ Week|	Subject						|	Presenter
 13	|	Lauren McCarthy, Lia |
 13	|	Ryan Habbyshaw, Michael Hansmeyer  |
 13	|	Paul Prudence, [Santiago Ortiz](https://moebio.com) |
+-->
