@@ -38,6 +38,8 @@ Simple: A Fourier Transform decomposes a function of time (a signal, e.g. sound)
 
 All signals can be described as a sum of different signals of different frequencies at different amplitudes (and phases).
 
+### Sinusoidal Waves ([../wk08/examples/noise/noise01_SineWave/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/noise/noise01_SineWave))
+
 A Sinusoid, cosine or sine wave, is the simplest component of a signal. Have a look at the code below:
 
 ```
@@ -95,12 +97,14 @@ void renderWave() {
 ```
 ![](images/sine.png)
 
-I've modified the code to create a static sine wave. Important to note:
+I've modified Daniel's code to create a static sine wave. Important to note:
 
 * theta is the starting angle of the wave
 * thetaStep describes the change of that starting angle each frame, creating motion
 * x is used to draw subsequent points along the wave, we set it to theta to apply motion to the whole wave
 * dx is the frequency of the wave, presently set to 1 cycle per screen width.
+
+## Multiple Components ([../wk08/examples/noise/noise02_SineWave/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/noise/noise02_SineWave))
 
 Let's modify it to add an arbitrary number of components and see what the sum of those components is:
 
@@ -255,8 +259,7 @@ There are some properties you can adjust:
 	* the more **octaves** (int), the more detail, the slower to calculate
 	* **falloff** (float) controls how much each of the octaves contributes
 
-Here's an example of 1D noise:
-
+### 1D Example: ([../wk08/examples/noise/noise03_noise1D/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/noise/noise03_noise1D))
 ```
 float pos=0.0; // initial position for the noise() function
 float dpos=0.01; // the amount we shift the position
@@ -313,7 +316,7 @@ Try changing:
 * `octaves`
 * `falloff`
 
-### 2D Example
+### 2D Example: ([../wk08/examples/noise/noise04_noise2D/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/noise/noise04_noise2D)
 
 ```
 float scale=.025;
@@ -346,7 +349,7 @@ void drawNoise() {
 ![](images/noise2D.png)
 
 
-### 3D Example
+### 3D Example: ([../wk08/examples/noise/noise05_noise3D/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/noise/noise05_noise3D))
 
 ```
 float scale=.025;
@@ -382,11 +385,11 @@ void drawNoise() {
 ![](images/noise3D.gif)
 
 
-### Drawing with Noise
+### Drawing with Noise ([..wk08/examples/overBreak/noiseDrawing/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/overBreak/noiseDrawing))
 
 We've already covered motion using PVectors. We also looked at acceleration. Acceleration is the result of some force acting on an object. Unless we're dealing with the masses of things, we can skip the math converting a force vector into an acceleration vector (`acceleration.add(force.div(mass))` for those who are interested).
 
-The example linked [here](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/overBreak/noiseDrawing) treats the greyscale values like a magnetic forcefield of varying intensity. 50% grey is 0 force strength.
+This sketch treats the greyscale values like a magnetic forcefield of varying intensity. 50% grey is 0 force strength.
 
 The vector of acceleration due to the force of a magnetic field on a charge in motion is given by:
 
@@ -440,7 +443,7 @@ Pixels are the picture cells, the atoms of our digital visual world. In processi
 * PImages
 * PGraphics
 
-### The Frame
+### The Frame ([../wk08/examples/pixels/pixels01_frame/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/pixels/pixels01_frame))
 
 When you draw to the screen using a function like circle(), you're changing the value of the pixels in the main drawing context of our sketch, the Frame.
 
@@ -491,7 +494,7 @@ There are three things to note:
 2. `loadPixels()`
 3. `color pixel = pixels[ mouseX + mouseY * width]`
 
-Now let's write to the pixels[] array:
+### Writing to pixels[]: ([../wk08/examples/pixels/pixels02_frame/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/pixels/pixels02_frame))
 
 ```
 void setup(){
@@ -549,7 +552,7 @@ Its the methods are:
 
 Full reference for the PImage class can be found [here](https://processing.org/reference/PImage.html).
 
-#### Loading and Displaying ([../wk08/examples/pixelsorting/PImage_00](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/pixelsorting/PImage_00))
+#### Loading and Displaying ([../wk08/examples/pixelsorting/PImage_00/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/pixelsorting/PImage_00))
 
 ![](images/PImage_00.png)
 
@@ -605,7 +608,7 @@ You can write to a PImage in the same way as you would write to the Frame pixels
 2. `PImage.pixels[ x + y*Pimage.width ] = color(someColor)` allows you to assign a color to a specific pixel
 3. `PImage.updatePixels()` writes changes to the PImage.pixels[] array back to the image data
 
-### PGraphics
+### PGraphics ([../wk08/examples/pixels/pixels03_PGraphics/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/pixels/pixels03_PGraphics))
 
 PGraphics require a slight shift in our thinking. The best way to think about PGraphics is to think about how you would work with building up a sketch in layers that would can turn on and off.
 
@@ -639,6 +642,8 @@ void keyPressed() {
   drawRect(myGraphic);
 }
 ```
+
+### Writing to PGraphics.pixels[]: ([../wk08/examples/pixels/pixels04_PGraphics/](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/tree/master/wk08/examples/pixels/pixels04_PGraphics))
 
 Writing into the pixels of a PGraphics objects goes a little something like this:
 
