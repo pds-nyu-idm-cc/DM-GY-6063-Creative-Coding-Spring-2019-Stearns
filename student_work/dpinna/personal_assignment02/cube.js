@@ -3,7 +3,7 @@ class Cube {
   // var velocity;
   // var rotation;
   // var w, h, d;
-  vertices = [];
+  // vertices[];
 
   // colors for faces of cube
   // color[] quadBG = new color[6];
@@ -59,7 +59,7 @@ class Cube {
   }
 
   // Cube shape itself
-  function drawCube() {
+  function drawCube(){
     // Draw cube
     for (var i = 0; i < 6; i++) {
       fill(quadBG[i]);
