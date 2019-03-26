@@ -1,13 +1,11 @@
-# Week 07 Homework:
+# Week 08 Homework:
 
 ## Class Review:
 
 Some of the topics we covered:
 
-* PVectors
-* PImage
-* Classes and ArrayLists
-* Glitch Art
+* Noise
+* Pixels
 
 ## Research Presentations
 
@@ -17,11 +15,10 @@ Have a look [here](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-
 
 ### Readings/Watching
 
-* Read: Learning Processing - Ch. 10-11
-* Read: GD P.2.3.2-P.2.3.6; M.1.0-M.2.5
-* Read: [Nature of Code introduction](https://natureofcode.com/book/introduction/)
-* Watch: [Javascript Objects, Map and random- 2.3-2.5](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA)
-* Work on Midterm Project (see below)
+* Read: Learning Processing - Ch. 15 - 16
+* Watch: Images - 10.1-10.7
+* Finish your Midterm Project
+* Push your progress to your GitHub repo WEEKLY (minimum) and put in a report/issue in the comments 
 
 ### Journal Entries (2)
 
@@ -44,13 +41,9 @@ You already have:
 1. A statement of what you are making/creating/building
 2. Research into similar projects, topics, theories, your subject
 3. A Plan on what you need to do in order to make a working interactive prototype in Processing or P5.js
+4. Posted your daily progress to github (repo AND wiki). Work from your student_work folder if necessary.
 
-You need to:
-
-1. Post your daily progress to github. Work from your student_work folder if necessary.
-2. Ask questions of your classmates on Slack. You should have both the desktop app and the mobile app setup.
-3. Come to me for conceptual and project management advice/guidance.
-4. Make use of the TA for technical.
+You need to complete your Mid Term Project and be ready to present and give feedback.
 
 ### How am I evaluating the Projects?
 
@@ -78,3 +71,10 @@ To what degree does the work demonstrate an understanding of the following conce
 * Conditional Statements
 * Iteration via Loops
 * Interaction
+
+Is the project well documented?
+
+* README.md
+* comments
+* ample journal entries to show development
+* sketches posted to `student_work` folder to show progress
