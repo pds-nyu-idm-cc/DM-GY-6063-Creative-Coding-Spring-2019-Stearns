@@ -20,3 +20,12 @@ void draw(){
   image(img, 0, 0);
   
 }
+
+void mousePressed(){
+  img.loadPixels();
+  color pixel = img.pixels[ mouseX + mouseY * width];
+  float red = red(pixel);
+  float green = green(pixel);
+  float blue = blue(pixel);
+  println("Red: "+red+", Green: "+green+", Blue: "+blue);
+}
