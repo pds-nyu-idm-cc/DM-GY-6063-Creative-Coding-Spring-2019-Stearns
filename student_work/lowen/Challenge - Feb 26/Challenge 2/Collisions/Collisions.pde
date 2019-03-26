@@ -23,7 +23,7 @@ void draw(){
   fill(0);
   for(int i = 0; i<numBalls; i++){
     fill(colorBalls);
-    ellipse(ballX[i], ballY[i], 90, 90);
+    ellipse(ballX[i], ballY[i], 20, 20);
     if(ballX[i] > width-10 || ballX[i] < 10){
       speedX[i] = speedX[i] * (-1);
     }
