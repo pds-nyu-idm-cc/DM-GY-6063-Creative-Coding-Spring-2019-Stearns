@@ -1,12 +1,19 @@
 //Letter Learner
 //Lauren Owen
 
+//Get ready to learn your alphabet!
+//Run the program to view instructions
+//Or run the program and click a letter on the keyboard to
+//generate it, a character, and the sound
+//Background music included at no additional cost
+//Learn you letters or help teach someone theirs today!
+
+
+//Background music during interaction
 import processing.sound.*;
-  
   SoundFile file;
-  //replace the sample.mp3 with your audio file name here
   
-//Audio library
+//Audio library for each letter name
 import ddf.minim.*;
 Minim minim;
 AudioPlayer sound;
@@ -15,7 +22,7 @@ AudioPlayer sound;
 PImage logo; 
 PImage row; 
 
-//Letters
+//Letter images
 PImage A; 
 PImage B;
 PImage C;
@@ -49,19 +56,19 @@ fullScreen();
 background(255);
 noStroke();
 
-
-    file = new SoundFile(this, "bensound-ukulele.mp3");
-  
+//Background music
+file = new SoundFile(this, "bensound-ukulele.mp3");
+  //volume
   file.amp(.4);
   file.play();
 
-//Letter images
+//Letter images function
 letters();
 
 //Welcome page with instructions
 intro();
 
-//Audio
+//Audio of letter names
 minim = new Minim(this);
 }
 
@@ -69,6 +76,7 @@ void draw () {
 }
 
 
+//Controls
 void keyPressed(){
   
 //Return to homepage
@@ -78,7 +86,7 @@ void keyPressed(){
  break;
 
 
-//Letters
+//Letter key presses with corressponding imagesm=, sounds and background colors
  case 'q':
  sound = minim.loadFile("q (1).mp3");
  sound.play();
@@ -290,7 +298,7 @@ void keyPressed(){
  }
 }
 
-//Call images
+//Letter images finction
 void letters () {
   A = loadImage("A.png");
   B = loadImage("B.png");
@@ -332,7 +340,7 @@ imageMode(CENTER);
 image(logo,width/2, height/2-200);
 image(row,width/2+20, 710);
 
-//texts
+//instructions
 textAlign(CENTER);
 textSize(20);
 fill(50);
@@ -340,3 +348,6 @@ text("Press any letter", width/2, height/2+70);
 text("on the keyboard to begin", width/2, height/2+90);
 text("Press Backspace or Delete to return here", width/2, height/2+110);
 }
+
+//Letter Learner
+//Lauren Owen
