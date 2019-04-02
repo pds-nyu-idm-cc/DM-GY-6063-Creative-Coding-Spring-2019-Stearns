@@ -6,7 +6,7 @@ class Particle {
   Particle(PVector a) {
     acceleration = new PVector(0, 0.05);
     velocity = new PVector(random(-1, 1), random(-1, 1));
-    location = a.get();
+    location = a.copy();
   }
   //update the location of particles
   void update() {

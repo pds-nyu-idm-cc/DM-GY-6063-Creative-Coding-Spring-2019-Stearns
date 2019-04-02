@@ -10,11 +10,13 @@ void setup() {
   rectMode(CENTER);
   p = new Particle(new PVector(width/2, mouseY));
 }
+ j
 void draw() {
   strokeWeight(3);
   stroke(0, 0, 0);
   smooth();
   background(#FED7DA);
+
   //the image of bottle
   fill(#BDD2E9);
   line(width/2-25, height/2+3, width/2-25, height/2+65);
@@ -26,6 +28,7 @@ void draw() {
     line(width/2+10*i-35, height/2+80, width/2+10*i-25, height/2+90);
     line(width/2+10*i-35, height/2+80+20, width/2+10*i-25, height/2+90+20);
   } 
+  //the display of bird
   bird();
   p.update();
   p.display();
@@ -36,7 +39,7 @@ void bird() {
 }
 
 void mousePressed() {
-  //p(new Particle(new PVector(mouseX, mouseY)));
+  p=(new Particle(new PVector(mouseX, mouseY)));
   if (p.isDead()) {
     background(157);
   }
