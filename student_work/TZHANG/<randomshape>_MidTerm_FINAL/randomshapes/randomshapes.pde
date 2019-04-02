@@ -1,7 +1,7 @@
-ArrayList<Node> nodes;
-int difference=50;
+ArrayList<Node> nodes; //create the arraylist to store the node objects
+int difference=50; // distances of nodes
 
-void setup()
+void setup() // iterate the nodes into the arraylist
 {
   size(800,500);
   smooth();
@@ -9,17 +9,17 @@ void setup()
   for (int i=0;i<100;i++)
   {
     Node D = new Node();
-    nodes.add(D);
+    nodes.add(D); // add node objects into the arraylist for drawing
   }
 }
 
-void draw()
+void draw() // draw the nodes by loopping them out of the arraylist and create the shapes
 {
   background(255,255,255);
   for (int i=0;i<nodes.size();i++)
   {
-    Node D1 = (Node) nodes.get(i);
-    D1.display();
+    Node D1 = (Node) nodes.get(i); // get the first node object.
+    D1.display(); //call functions from node class
     D1.update();
     D1.mouseMove();
     for (int j = i + 1; j < nodes.size(); j++) {
