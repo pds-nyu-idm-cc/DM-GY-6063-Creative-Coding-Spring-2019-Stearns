@@ -82,7 +82,7 @@ void keyPressed(){
  case 'q':
  sound = minim.loadFile("q (1).mp3");
  sound.play();
- background(255);
+ background(#eb5810);
  imageMode(CENTER);
  image(Q,width/2, height/2);
  break;
@@ -90,7 +90,7 @@ void keyPressed(){
  case 'w':
  sound = minim.loadFile("w (1).mp3");
  sound.play();
- background(255);
+ background(#a3822b);
  imageMode(CENTER);
  image(W,width/2, height/2);
  break;
@@ -98,7 +98,7 @@ void keyPressed(){
  case 'e':
  sound = minim.loadFile("e (1).mp3");
  sound.play();
- background(255);
+ background(#fc4686);
  imageMode(CENTER);
  image(E,width/2, height/2);
  break;
@@ -106,7 +106,7 @@ void keyPressed(){
  case 'r':
  sound = minim.loadFile("r (1).mp3");
  sound.play();
- background(255);
+ background(#c410eb);
  imageMode(CENTER);
  image(R,width/2, height/2);
  break;
@@ -114,7 +114,7 @@ void keyPressed(){
  case 't':
  sound = minim.loadFile("t (1).mp3");
  sound.play();
- background(255);
+ background(#b82357);
  imageMode(CENTER);
  image(T,width/2, height/2);
  break;
@@ -122,7 +122,7 @@ void keyPressed(){
  case 'y':
  sound = minim.loadFile("y (1).mp3");
  sound.play();
- background(255);
+ background(#3569c8);
  imageMode(CENTER);
  image(Y,width/2, height/2);
  break;
@@ -130,7 +130,7 @@ void keyPressed(){
  case 'u':
  sound = minim.loadFile("u (1).mp3");
  sound.play();
- background(255);
+ background(#d7a3e0);
  imageMode(CENTER);
  image(U,width/2, height/2);
  break;
@@ -138,7 +138,7 @@ void keyPressed(){
  case 'i':
  sound = minim.loadFile("i (1).mp3");
  sound.play();
- background(255);
+ background(#f3e334);
  imageMode(CENTER);
  image(I,width/2, height/2);
  break;
@@ -146,7 +146,7 @@ void keyPressed(){
  case 'o':
  sound = minim.loadFile("o (1).mp3");
  sound.play();
- background(255);
+ background(#2fff8c);
  imageMode(CENTER);
  image(O,width/2, height/2);
  break;
@@ -154,7 +154,7 @@ void keyPressed(){
  case 'p':
  sound = minim.loadFile("p (1).mp3");
  sound.play();
- background(255);
+ background(#c8c690);
  imageMode(CENTER);
  image(P,width/2, height/2);
  break;
@@ -162,7 +162,7 @@ void keyPressed(){
  case 'a':
  sound = minim.loadFile("a (1).mp3");
  sound.play();
- background(255);
+ background(#f6e16c);
  imageMode(CENTER);
  image(A,width/2, height/2);
  break;
@@ -170,7 +170,7 @@ void keyPressed(){
  case 's':
  sound = minim.loadFile("s (1).mp3");
  sound.play();
- background(255);
+ background(#2349b8);
  imageMode(CENTER);
  image(S,width/2, height/2);
  break;
@@ -178,7 +178,7 @@ void keyPressed(){
  case 'd':
  sound = minim.loadFile("d (1).mp3");
  sound.play();
- background(255);
+ background(#cb44df);
  imageMode(CENTER);
  image(D,width/2, height/2);
  break;
@@ -186,7 +186,7 @@ void keyPressed(){
  case 'f':
  sound = minim.loadFile("f (1).mp3");
  sound.play();
- background(255);
+ background(#b9c3e3);
  imageMode(CENTER);
  image(F,width/2, height/2);
  break;
@@ -194,7 +194,7 @@ void keyPressed(){
  case 'g':
  sound = minim.loadFile("g (1).mp3");
  sound.play();
- background(255);
+ background(#5cbe6c);
  imageMode(CENTER);
  image(G,width/2, height/2);
  break;
@@ -202,7 +202,7 @@ void keyPressed(){
  case 'h':
  sound = minim.loadFile("h (1).mp3");
  sound.play();
- background(255);
+ background(#e9953a);
  imageMode(CENTER);
  image(H,width/2, height/2);
  break;
@@ -210,7 +210,7 @@ void keyPressed(){
  case 'j':
  sound = minim.loadFile("j (1).mp3");
  sound.play();
- background(255);
+ background(#71dae3);
  imageMode(CENTER);
  image(J,width/2, height/2);
  break;
@@ -218,7 +218,7 @@ void keyPressed(){
  case 'k':
  sound = minim.loadFile("k (1).mp3");
  sound.play();
- background(255);
+ background(#71e389);
  imageMode(CENTER);
  image(K,width/2, height/2);
  break;
@@ -226,7 +226,7 @@ void keyPressed(){
  case 'l':
  sound = minim.loadFile("l (1).mp3");
  sound.play();
- background(255);
+ background(#fd944d);
  imageMode(CENTER);
  image(L,width/2, height/2);
  break;
@@ -235,7 +235,7 @@ void keyPressed(){
  //I have no idea why the Z file sounds like "Zedd"
  sound = minim.loadFile("z (1).mp3");
  sound.play();
- background(255);
+ background(#067d0b);
  imageMode(CENTER);
  image(Z,width/2, height/2);
  break;
@@ -243,7 +243,7 @@ void keyPressed(){
  case 'x':
  sound = minim.loadFile("x (1).mp3");
  sound.play();
- background(255);
+ background(#e21000);
  imageMode(CENTER);
  image(A,width/2, height/2);
  break;
@@ -251,7 +251,7 @@ void keyPressed(){
  case 'c':
  sound = minim.loadFile("c (1).mp3");
  sound.play();
- background(255);
+ background(#ecc996);
  imageMode(CENTER);
  image(C,width/2, height/2);
  break;
@@ -259,7 +259,7 @@ void keyPressed(){
  case 'v':
  sound = minim.loadFile("v (1).mp3");
  sound.play();
- background(255);
+ background(#1d816f);
  imageMode(CENTER);
  image(V,width/2, height/2);
  break;
@@ -267,7 +267,7 @@ void keyPressed(){
  case 'b':
  sound = minim.loadFile("b (1).mp3");
  sound.play();
- background(255);
+ background(#706ecf);
  imageMode(CENTER);
  image(B,width/2, height/2);
  break;
@@ -275,7 +275,7 @@ void keyPressed(){
  case 'n':
  sound = minim.loadFile("n (1).mp3");
  sound.play();
- background(255);
+ background(#d4a8f6);
  imageMode(CENTER);
  image(N,width/2, height/2);
  break;
@@ -283,7 +283,7 @@ void keyPressed(){
  case 'm':
  sound = minim.loadFile("m (1).mp3");
  sound.play();
- background(255);
+ background(#a8d8f6);
  imageMode(CENTER);
  image(M,width/2, height/2);
  break;
