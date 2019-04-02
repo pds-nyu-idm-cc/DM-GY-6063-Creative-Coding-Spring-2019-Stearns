@@ -1,16 +1,16 @@
-class Node {
-  PVector position;
+class Node { //Node class
+  PVector position; //PVector for node movements.
   PVector velocity;
   PVector acceleration;
   float radius;
   color c;
-  float easing = 0.01;
+  float easing = 0.01; // node moving to mouse with a easing factor.
   
   Node( )
   {
-    position = new PVector();
+    position = new PVector(); //initialise the new vector for the nodes.
     velocity = new PVector(0.01,0.01);
-    position.x = random(0, width);
+    position.x = random(0, width); // randomise the position for the nodes.
     position.y = random(0, height);
     radius = random(1, 5);
     int j = (int)random(0, 4);
@@ -32,7 +32,7 @@ class Node {
     }
   }
 
-  void display()
+  void display() //draw the nodes on the screen
   {
     pushStyle();
     noStroke();
@@ -41,7 +41,7 @@ class Node {
     popStyle();
   }
 
-  void update()
+  void update() // update the position by PVector
   {
     position.add(velocity);
     if(position.x > width-radius || position.x < 0+radius){
@@ -52,7 +52,7 @@ class Node {
     }
   }
   
-  void mouseMove(){
+  void mouseMove(){ // make the mouse position as the place that shapes come closer.
     float targetX = mouseX;
     float dx = targetX - position.x;
     position.x += dx * easing;
