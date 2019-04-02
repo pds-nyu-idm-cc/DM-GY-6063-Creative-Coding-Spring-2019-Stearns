@@ -33,21 +33,21 @@ class Cube {
     vertices[3] = (-w / 2, h / 2, d / 2);
     //left
     vertices[4] = (-w / 2, -h / 2, d / 2);
-    vertices[5] =  (-w / 2, -h / 2, -d / 2);
-    vertices[6] =  (-w / 2, h / 2, -d / 2);
-    vertices[7] =  (-w / 2, h / 2, d / 2);
+    vertices[5] = (-w / 2, -h / 2, -d / 2);
+    vertices[6] = (-w / 2, h / 2, -d / 2);
+    vertices[7] = (-w / 2, h / 2, d / 2);
     //right
-    vertices[8] =  (w / 2, -h / 2, d / 2);
-    vertices[9] =  (w / 2, -h / 2, -d / 2);
+    vertices[8] = (w / 2, -h / 2, d / 2);
+    vertices[9] = (w / 2, -h / 2, -d / 2);
     vertices[10] = (w / 2, h / 2, -d / 2);
     vertices[11] = (w / 2, h / 2, d / 2);
     //back
     vertices[12] = (-w / 2, -h / 2, -d / 2);
-    vertices[13] =  (w / 2, -h / 2, -d / 2);
-    vertices[14] =  (w / 2, h / 2, -d / 2);
-    vertices[15] =  (-w / 2, h / 2, -d / 2);
+    vertices[13] = (w / 2, -h / 2, -d / 2);
+    vertices[14] = (w / 2, h / 2, -d / 2);
+    vertices[15] = (-w / 2, h / 2, -d / 2);
     //top
-    vertices[16] =  (-w / 2, -h / 2, d / 2);
+    vertices[16] = (-w / 2, -h / 2, d / 2);
     vertices[17] = (-w / 2, -h / 2, -d / 2);
     vertices[18] = (w / 2, -h / 2, -d / 2);
     vertices[19] = (w / 2, -h / 2, d / 2);
@@ -59,7 +59,7 @@ class Cube {
   }
 
   // Cube shape itself
-  function drawCube(){
+  function drawCube() {
     // Draw cube
     for (var i = 0; i < 6; i++) {
       fill(quadBG[i]);
