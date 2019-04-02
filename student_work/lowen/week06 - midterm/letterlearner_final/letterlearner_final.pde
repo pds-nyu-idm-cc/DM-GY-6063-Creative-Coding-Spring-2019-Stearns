@@ -1,7 +1,12 @@
-//Letters
+//Letter Learner
 //Lauren Owen
 
-//Audio llibrary
+import processing.sound.*;
+  
+  SoundFile file;
+  //replace the sample.mp3 with your audio file name here
+  
+//Audio library
 import ddf.minim.*;
 Minim minim;
 AudioPlayer sound;
@@ -43,6 +48,12 @@ void setup() {
 fullScreen();
 background(255);
 noStroke();
+
+
+    file = new SoundFile(this, "bensound-ukulele.mp3");
+  
+  file.amp(.4);
+  file.play();
 
 //Letter images
 letters();
