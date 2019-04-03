@@ -691,3 +691,4 @@ void mousePressed(){
 ```
 
 The advantage is that you can render your buttons and interface in one PGraphics context, and your art in separate one. Then when you want to save the artwork, your use `PGraphics.save("relative/path/to/yourFile.png");`
+
