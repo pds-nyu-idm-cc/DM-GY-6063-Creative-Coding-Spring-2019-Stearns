@@ -1,3 +1,16 @@
+
+/**
+  press buttons any button 1-6 once the program starts, 
+  then using the mouse, press and drag to draw 
+  
+  brushes 1-3 are black ink in different weights 
+  brush 4 is pink
+  brush 5 is blue
+  brush 6 is purple
+  
+  pressing e - erases the entire canvas 
+*/
+
 int brushId = 1;
 
 PImage brush1;
