@@ -1,6 +1,20 @@
-// Midterm Project: Spongebob AR selfie app
-// By Yundi Jude Zhu
-// IDM Spring 2019
+/*
+ * Midterm Project: Spongebob AR selfie app
+ * By Yundi Jude Zhu
+ * IDM Spring 2019
+ * 
+ * This is a prototype for taking selfies with AR characters from Spongebob. 
+ * In this prototype, you are able to interact with the bubbles with your mouse. 
+ * The bubbles will follow your mouse, and once you click on the screen, the bubbles will be pushed away.
+ * You can also click on the headshot below to show Spongebob characters.
+ * They will stand on your shoulder.
+ * They will follow you anywhere as long as your face is in the camera.
+ * You can pose for a photo by pressing the camera icon.
+ * The photo will be stored in the same folder.
+ * Enjoy and let's save the planet!
+ *
+ * Check out the process here: http://www.juuud.com/ar-spongebob-selfie-app
+ */
 
 import processing.video.*;
 import gab.opencv.*;
@@ -11,18 +25,13 @@ PImage sponge;
 PImage krab;
 
 float r = 50; // radius for buttons
+int imageIndex  = 0; // initial screen
+int qtyBubbles = 100; // number of bubbless
 
 Capture video;
 OpenCV opencv;
 
-// initial screen
-int imageIndex  = 0;
-
-// number of bubbless
-int qtyBubbles = 100;
-
-// declare an array of bubbless
-Bubbles[] bubbles;
+Bubbles[] bubbles; // declare an array of bubbless
 
 void setup() {
   size(340, 600);
@@ -58,7 +67,7 @@ void draw() {
   opencv.loadImage(video);
   image(video, 0, 0 );
   popMatrix(); // pop the camera
-  
+
   PImage logo;
   logo = loadImage("SpongeBob logo.png");
   image(logo, 270, 5); // logo centered on top
@@ -95,7 +104,7 @@ void draw() {
   popMatrix(); // pop everything
 
   drawBubbles();
-
+  
   button1();
   button2();
   button3();
@@ -203,7 +212,7 @@ void pushAway() {
     bubbles[i].speed=PVector.sub(bubbles[i].position, new PVector(mouseX, mouseY)).mult(10);
   }
 }
-  
+
 void captureEvent(Capture c) {
   c.read();
 }
