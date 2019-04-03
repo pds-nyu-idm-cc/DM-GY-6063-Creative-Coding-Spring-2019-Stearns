@@ -33,7 +33,7 @@ class Bubbles {
     fill(speed.mag()*25, random(0, 255), random(0, 255));
     noStroke();
     // draw a circle
-    circle(position.x, position.y, size);
-    circle(position.x - 30, position.y -40, size/2);
+    circle(position.x, position.y, size); // big bubble
+    circle(position.x - 30, position.y -40, size/2); // small bubble
   }
 }
