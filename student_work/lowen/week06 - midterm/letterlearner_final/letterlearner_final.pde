@@ -1,4 +1,4 @@
-//Letter Learner
+//Letter Learner V3
 //Lauren Owen
 
 //Get ready to learn your alphabet!
@@ -338,7 +338,7 @@ logo = loadImage("logo.png");
 row = loadImage("row.png");
 imageMode(CENTER);
 image(logo,width/2, height/2-200);
-image(row,width/2+20, 710);
+image(row,width/2+20, 800);
 
 //instructions
 textAlign(CENTER);
