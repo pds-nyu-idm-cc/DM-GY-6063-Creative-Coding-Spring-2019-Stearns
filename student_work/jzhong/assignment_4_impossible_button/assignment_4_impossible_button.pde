@@ -1,4 +1,5 @@
-
+int rand = -1;
+boolean keyPress = false;
 
 Button b1, b2, b3, b4, b5;
 
@@ -8,7 +9,7 @@ void setup() {
   b1 = new Button(width*1/6, height/2, color(236, 30, 50), "fortunate");
   b2 = new Button(width*2/6, height/2, color(238, 100, 50), "exciting");
   b3 = new Button(width*3/6, height/2, color(255, 245, 90), "comfortable");
-  b4 = new Button(width*4/6, height/2, color(103, 218, 71), "regular");
+  b4 = new Button(width*4/6, height/2, color(103, 218, 71), "''meh''");
   b5 = new Button(width*5/6, height/2, color(50, 129, 246), "boring");
   //noLoop();
 }
@@ -23,20 +24,17 @@ void draw() {
   b5.display();
 
   displayText();
+  movement();
+  reset();
+  
 }
 
 void mouseClicked() {
-  int r = int(random(5));
-  if (r == 0) {
-    b1.choose();
-  } else if (r == 1) {
-    b2.choose();
-  } else if (r == 2) {
-    b3.choose();
-  } else if (r == 3) {
-    b4.choose();
-  } else if (r == 4) {
-    b5.choose();
-  }
-  
+  rand = int(random(5));
+  keyPress = false;
+}
+
+void keyPressed() {
+  keyPress = true;
+  //println(keyPress);
 }

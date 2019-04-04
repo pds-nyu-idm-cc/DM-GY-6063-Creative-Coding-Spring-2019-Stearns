@@ -13,5 +13,7 @@ void displayText(){
   fill(0);
   text("How is your day today?", width/2, 75);
   text("Click on your mouse to find out!", width/2, 325);
-  //maybe add a selection box later?
+  if (rand != -1){
+    text("Press any KEY to RESET", width/2, 350);
+  }
 }
