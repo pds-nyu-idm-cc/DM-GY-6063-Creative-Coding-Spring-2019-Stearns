@@ -2,7 +2,7 @@
 
 ## Agenda
 
-* Announcements/Reminders
+* Announcements
 * Torin Blankensmith
 * Image Manipulation: Pixel Sorting
 * Research Presentation
@@ -50,7 +50,7 @@ From theartistsinstitute.org:
 
 image source: [https://ayearincode.tumblr.com/archive](https://ayearincode.tumblr.com/archive)
 
-### [Pixel Sorting Notes]()
+### [Pixel Sorting Notes](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/wk10/pixelsorting.md)
 
 ## Research Presentation
 
@@ -68,7 +68,7 @@ taoZhang.givePresentation();
 
 image source: [https://ayearincode.tumblr.com/archive](https://ayearincode.tumblr.com/archive)
 
-### [Vector Drifting (Datamoshing) Notes]()
+### [Vector Drifting (Datamoshing) Notes](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/wk10/datamoshing.md)
 
 ## Assignment 05
 
