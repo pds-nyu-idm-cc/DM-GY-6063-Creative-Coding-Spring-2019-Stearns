@@ -7,7 +7,7 @@ void setup(){
   surface.setResizable(true);
   img = loadImage("geo.jpg");
   surface.setSize(img.width, img.height);
-  noLoop(); 
+  //noLoop(); 
 }
 
 void draw(){
