@@ -1,4 +1,5 @@
 ///////combing the pixel sorting and datamoshing
+////////reference from Philps' week 10 note about datamoshing00 and pixelSort03
 
 PImage img;
 //int range_start;
