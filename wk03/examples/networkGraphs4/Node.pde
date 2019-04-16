@@ -57,7 +57,7 @@ class Node {
     }
   }
 
-  // draw the node
+  // draw the Node
   void render() {
     stroke(sC);
     strokeWeight(5);

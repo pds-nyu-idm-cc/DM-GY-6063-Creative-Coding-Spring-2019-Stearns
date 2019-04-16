@@ -12,8 +12,18 @@ int boatSpeed = 50;
 void setup() {
   size(800, 800);
   smooth();
+<<<<<<< HEAD:student_work/dpinna/assignment_02/boat_move/boat_move.pde
+  noCursor();
+  playMusic();
+
+  level1 = new Level(1, "Level One", islandXlev1, islandYlev1, 100, 300, 250, 320, 420, 450, 520, 430);
+  level2 = new Level(2, "Level Two", islandXlev2, islandYlev2, 100, 100, 100, 100, 100, 100, 100, 100);
+  level3 = new Level(3, "Level Three", islandXlev3, islandYlev3, 100, 100, 100, 100, 100, 100, 100, 100);
+  myBoat = new Boat(boatX, boatY);
+=======
   //myBoat = new Boat(boatX, boatY);
   file = new SoundFile(this, "sail.wav");
+>>>>>>> parent of 4212160... Part 2 of the sail game.:student_work/dpinna/assignment2/boat_move/boat_move.pde
 
   file.play();
 }
@@ -78,4 +88,33 @@ void keyPressed() {
   if (keyCode == DOWN) {
     boatY = boatY + boatSpeed;
   }
+<<<<<<< HEAD:student_work/dpinna/assignment_02/boat_move/boat_move.pde
+
+  if (keyCode == DOWN) {
+    myBoat.moveDown = false;
+  }
+}
+
+void playMusic() {
+  //Waves soundtrack
+  file = new SoundFile(this, "sail.wav");
+  file.play();
+}
+
+void showLevel() {
+  String status = "Level: "+level;
+  fill(240);
+  rect(675, 20, 110, 75);
+  fill(0);
+  font = createFont("helvetica.ttf", 20);
+  textFont(font);
+  textAlign(CENTER, CENTER);
+  text(status, 680, 20, 100, 50);
+  String lives = "Lives: "+ 3;
+  font = createFont("helvetica.ttf", 20);
+  textFont(font);
+  textAlign(CENTER, CENTER);
+  text(lives, 680, 45, 100, 50);
+=======
+>>>>>>> parent of 4212160... Part 2 of the sail game.:student_work/dpinna/assignment2/boat_move/boat_move.pde
 }

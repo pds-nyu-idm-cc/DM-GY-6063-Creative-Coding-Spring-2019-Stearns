@@ -183,12 +183,15 @@ If you use code from online, whether for inspiration, modification or reference,
 
 You will need 3 apps: a browser, GitHub desktop and a file browser (Windows Explorer, Finder, Terminal, etc) to complete this entire process.
 
-**Complete the [Getting Started With GitHub](github_help/github_setup.md) walkthrough.**
+#### *Complete the following walkthroughs:*
 
+**Github Guides**
 
-1. Save your work AND all of the necessary support files (index.html, libraries folder, pictures, media, etc) in a 'project' folder that is titled in this manner on your computer: *FirstName\_LastName\_Assignment-##*, etc. For example: `~/DMGY6063/Phillip_Stearns_Assignment-01` or `~/DMGY6063/Phillip_Stearns_Challenge-01` or `~/DMGY6063/Phillip_Stearns_Midterm-Project`, etc.
-2. Place this 'project' in the folder you created in your cloned Fork of the class repository, e.g. `DM-GY-6063-Creative-Coding-Spring-2019-Stearns/student_work/pstearns` where pstearns will be **your** _first initial_ and _lastname_
-3. Follow the steps 19 through 22 in the [Getting Started With GitHub](github_help/github_setup.md) walkthrough.
+* [Getting Started](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
+* [Keep Your Class Repo Branch Up To Date](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_merging.md) - Keep your Fork and Branch up to date!
+* [Submit Your Homework](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_homework.md) - Submitting Your Homework
+* [Class Wiki for Journaling](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_wiki.md) - Publishing your Journal to the Wiki
+
 
 ## [Research Presentation](research_presentation.md)
 

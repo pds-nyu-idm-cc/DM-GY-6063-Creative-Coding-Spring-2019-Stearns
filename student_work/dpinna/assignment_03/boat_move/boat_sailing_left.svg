@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="217" viewBox="0 0 270 217">
+  <g fill="#7F3737" fill-rule="evenodd" transform="matrix(-1 0 0 1 270 0)">
+    <polygon fill="#A79458" fill-rule="nonzero" points="0 175 270 175 250 189 183 217 31.172 217"/>
+    <polygon fill="#252C4D" fill-rule="nonzero" points="10.5 189 250 189 183 217 31.172 217"/>
+    <rect width="7" height="175" x="132" fill="#D8D8D8"/>
+    <polygon fill="#FFF" stroke="#979797" points="132 2 132 168 20 138 78 53"/>
+    <polygon fill="#00225F" fill-opacity=".65" points="35.5 116 131.5 136 131.5 144 30.8 123"/>
+    <polygon fill="#00225F" fill-opacity=".65" points="41.7 107 131.5 125 131.5 133 37.6 113"/>
+    <polygon fill="#FFF" stroke="#979797" points="139 2 268 175 163 155"/>
+  </g>
+</svg>

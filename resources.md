@@ -22,23 +22,24 @@
 ### Texts
 * [Learning Processing, SECOND EDITION by Daniel Shiffman](http://learningprocessing.com/) ISBN-13: 978-0123944436 LP
 This book is available for purchase in the NYU bookstore, and will be physically on reserve at the NYU School of Engineering library. You can check the status of the book [here](http://library.nyu.edu/). This book in it's initial edition is available as an online book via [here](http://bobcat.library.nyu.edu).
-* [Generative Design by Bohnacker, GroB, Laub & Lazzeroni](http://www.generative-gestaltung.de/about) ISBN-13: 978-1616890773 GD
-This book is available for purchase in the NYU bookstore, and will be on reserve at the NYU School of Engineering library. You can check the status of the book [here](http://library.nyu.edu/)
+* [Generative Design by Bohnacker, GroB, Laub & Lazzeroni](http://www.generative-gestaltung.de/2/) ISBN-13: 978-1616890773 GD. This book is available for purchase in the NYU bookstore, and will be on reserve at the NYU School of Engineering library. You can check the status of the book [here](http://library.nyu.edu/)
 * [Getting Started with P5.js](https://p5js.org/books/)
 
 ### Software
 * [Processing](https://processing.org/download/)
 * [P5.js](http://p5js.org/download/) Download P5.js complete
 * [GitHub Desktop](https://desktop.github.com)
-* [Sublime Text](https://www.sublimetext.com/3) - Text Editor for Developers
-<!--* FTP Client - [Cyberduck](https://cyberduck.io/?l=en), [Transmit](https://panic.com/transmit/) (Mac only), [FileZilla](https://filezilla-project.org/)-->
+* [MacDown](https://macdown.uranusjr.com/) - Fun to use markdown editor. Crucial for all the .md files you''l be posting to github!
 * [Nature of Code](http://natureofcode.com/) NoC
 * [Slack](https://idm-cc.slack.com) - Install the Apps for BOTH Desktop AND Mobile
 * [Sign Up](https://join.slack.com/t/idm-cc/signup) for the class Slack with your NYU email
+* [Sublime Text](https://www.sublimetext.com/3) - Text Editor for Developers
 
 ### Github Guides
-* [Getting Started](github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
-* [Merging Class Repository Changes](github_help/github_merging.md) - Keep your Fork and Branch up to date!
+* [Getting Started](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_setup.md) - Forking, Cloning, Commiting, Pushing, Submitting Pull Requests.
+* [Keep Your Class Repo Branch Up To Date](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_merging.md) - Keep your Fork and Branch up to date!
+* [Submit Your Homework](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_homework.md) - Submitting Your Homework
+* [Class Wiki for Journaling](https://github.com/pds-nyu-idm-cc/DM-GY-6063-Creative-Coding-Spring-2019-Stearns/blob/master/github_help/github_wiki.md) - Publishing your Journal to the Wiki
 
 ### Required Resources 
 
@@ -115,47 +116,47 @@ This book is available for purchase in the NYU bookstore, and will be on reserve
 
 #### Programming (general) and other languages
 
-* [https://worrydream.com/LearnableProgramming/]()
-* [https://www.udacity.com/]()
-* [https://www.codeschool.com/]()
+* [https://worrydream.com/LearnableProgramming/](https://worrydream.com/LearnableProgramming/)
+* [https://www.udacity.com/](https://www.udacity.com/)
+* [https://www.codeschool.com/](https://www.codeschool.com/)
 * [Code Academy](http://www.codecademy.com/)
-* [https://coderwall.com/]()
-* [https://projecteuler.net/problems]()
-* [https://teamtreehouse.com/library]()
-* [https://www.openframeworks.cc/tutorials/]()
-* [https://www.openframeworks.cc/]()
-* [https://www.openframeworks.cc/documentation/]()
-* [https://wiki.openframeworks.cc/index.php?title=Main_Page]()
-* [https://ofxaddons.com/]()
-* [https://learnpythonthehardway.org/]()
-* [https://ruby.learncodethehardway.org/]()
-* [https://codingbat.com/]() (Python and Java)
-* [https://inventwithpython.com/]()
-* [https://creativejs.com/2011/08/31-days-of-canvas-tutorials/]()
+* [https://coderwall.com/](https://coderwall.com/)
+* [https://projecteuler.net/problems](https://projecteuler.net/problems)
+* [https://teamtreehouse.com/library](https://teamtreehouse.com/library)
+* [https://www.openframeworks.cc/tutorials/](https://www.openframeworks.cc/tutorials/)
+* [https://www.openframeworks.cc/](https://www.openframeworks.cc/)
+* [https://www.openframeworks.cc/documentation/](https://www.openframeworks.cc/documentation/)
+* [https://wiki.openframeworks.cc/index.php?title=Main_Page](https://wiki.openframeworks.cc/index.php?title=Main_Page)
+* [https://ofxaddons.com/](https://ofxaddons.com/)
+* [https://learnpythonthehardway.org/](https://learnpythonthehardway.org/)
+* [https://ruby.learncodethehardway.org/](https://ruby.learncodethehardway.org/)
+* [https://codingbat.com/](https://codingbat.com/) (Python and Java)
+* [https://inventwithpython.com/](https://inventwithpython.com/)
+* [https://creativejs.com/2011/08/31-days-of-canvas-tutorials/](https://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
 
 #### Processing
 
 * [Learning Processing (Daniel Shiffman, video lectures)](https://icm.shiffman.net/) [More video's here](https://learningprocessing.com/videos/) [and even more here](https://vimeo.com/shiffman)
 * [Nature of Code (Daniel Shiffman, video lectures)](https://vimeo.com/channels/natureofcode/videos/page:1/sort:preset)
-* [https://www.openprocessing.org/]()
-* [https://funprogramming.org/]()
-* [https://forum.processing.org/]()
-* [https://processing.org/learning/]()
-* [https://www.learningprocessing.com/tutorials/]()
-* [https://www.plethora-project.com/2011/09/12/processing-tutorials/]()
-* [https://flowingdata.com/2010/04/13/data-visualization-tutorial-in-processing/]()
-* [https://www.lynda.com/Processing-training-tutorials/1402-0.html]()
+* [https://www.openprocessing.org/](https://www.openprocessing.org/)
+* [https://funprogramming.org/](https://funprogramming.org/)
+* [https://forum.processing.org/](https://forum.processing.org/)
+* [https://processing.org/learning/](https://processing.org/learning/)
+* [https://www.learningprocessing.com/tutorials/](https://www.learningprocessing.com/tutorials/)
+* [https://www.plethora-project.com/2011/09/12/processing-tutorials/](https://www.plethora-project.com/2011/09/12/processing-tutorials/)
+* [https://flowingdata.com/2010/04/13/data-visualization-tutorial-in-processing/](https://flowingdata.com/2010/04/13/data-visualization-tutorial-in-processing/)
+* [https://www.lynda.com/Processing-training-tutorials/1402-0.html](https://www.lynda.com/Processing-training-tutorials/1402-0.html)
 
 ### P5.js
 
-* [https://github.com/shiffman/LearningProcessing-p5.js]()
-* [https://p5js.org/]()
-* [https://p5js.org/tutorials/]()
+* [https://github.com/shiffman/LearningProcessing-p5.js](https://github.com/shiffman/LearningProcessing-p5.js)
+* [https://p5js.org/](https://p5js.org/)
+* [https://p5js.org/tutorials/](https://p5js.org/tutorials/)
 * [Dan Shiffman Tutorials](https://youtu.be/8j0UDiN7my4?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA)
 * [More Shiffman P5.js tutorials (without ads)](https://vimeo.com/channels/learningp5js/page:1)
-* [https://p5js.org/get-started/]()
-* [https://github.com/processing/p5.js/wiki/JavaScript-basics]()
-* [https://gitbookio.gitbooks.io/javascript/content/]()
+* [https://p5js.org/get-started/](https://p5js.org/get-started/)
+* [https://github.com/processing/p5.js/wiki/JavaScript-basics](https://github.com/processing/p5.js/wiki/JavaScript-basics)
+* [https://gitbookio.gitbooks.io/javascript/content/](https://gitbookio.gitbooks.io/javascript/content/)
 * [P5.js sketchpad](https://p5js.sketchpad.cc/sp/padlist/all-portfolio-sketches)
 * [More about arrays in Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 * [API's](https://github.com/processing/p5.js/wiki/Loading-external-files:-AJAX,-XML,-JSON)
@@ -193,23 +194,22 @@ This book is available for purchase in the NYU bookstore, and will be on reserve
 
 #### openFrameworks
 
-* [https://sites.google.com/site/ofauckland/home]()
-* [https://github.com/jefftimesten/CodeForArt]()
-* [https://github.com/jefftimesten/CodeForArt]()
-* [http://www.quietless.com/kitchen/getting-started-with-openframeworks/]()
-* [http://www.memo.tv/simple-openframeworks-application-on-iphone-sample-1/]()
+* [https://sites.google.com/site/ofauckland/home](https://sites.google.com/site/ofauckland/home)
+* [https://github.com/jefftimesten/CodeForArt](https://github.com/jefftimesten/CodeForArt)
+* [http://www.quietless.com/kitchen/getting-started-with-openframeworks/](http://www.quietless.com/kitchen/getting-started-with-openframeworks/)
+* [http://www.memo.tv/simple-openframeworks-application-on-iphone-sample-1/](http://www.memo.tv/simple-openframeworks-application-on-iphone-sample-1/)
 
 #### Git
 
-* [http://gitref.org/]()
-* [http://ndpsoftware.com/git-cheatsheet.html#loc=local_repo]()
-* [http://git-scm.com/docs]()
+* [http://gitref.org/](http://gitref.org/)
+* [http://ndpsoftware.com/git-cheatsheet.html#loc=local_repo](http://ndpsoftware.com/git-cheatsheet.html#loc=local_repo)
+* [http://git-scm.com/docs](http://git-scm.com/docs)
 *  [GitHub for Beginners](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1")
-* [http://rogerdudler.github.com/git-guide/]()
-* [http://www.lynda.com/GitHub-training-tutorials/1384-0.html]()
+* [http://rogerdudler.github.com/git-guide/](http://rogerdudler.github.com/git-guide/)
+* [http://www.lynda.com/GitHub-training-tutorials/1384-0.html](http://www.lynda.com/GitHub-training-tutorials/1384-0.html)
 
 #### Xcode
 
-* [http://www.lynda.com/Xcode-training-tutorials/451-0.html]()
+* [http://www.lynda.com/Xcode-training-tutorials/451-0.html](http://www.lynda.com/Xcode-training-tutorials/451-0.html)
 
 credits: this resource list draws heavily from the work of Katherine Bennett and Kevin Siwoff
