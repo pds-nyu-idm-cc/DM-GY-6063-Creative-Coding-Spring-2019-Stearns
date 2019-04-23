@@ -1,13 +1,16 @@
 void initializeNeurons(){
+  
   data = loadTable("neurodata.txt", "tsv"); // tsv means the data is tab delimited (separated by tabs)
-
+  
+  // iterate through the table and create a Neuron for each unique one encountered
   for (TableRow row : data.rows()) {
-
+    
+    //Neuron names are given in the 1st and 2nd columns
     String neuron1 = row.getString(0);
     String neuron2 = row.getString(1);
-
+ 
     if (!neuronIsInArray(neuron1)) {
-      Neuron n = new Neuron(neuron1, new PVector(random(width), random(height)));
+      Neuron n = new Neuron(neuron1);
       n.addConnection(neuron2);
       neurons = (Neuron[])append(neurons, n);
     } else {
@@ -16,7 +19,7 @@ void initializeNeurons(){
     }
 
     if (!neuronIsInArray(neuron2)) {
-      Neuron n = new Neuron(neuron2, new PVector(random(width), random(height)));
+      Neuron n = new Neuron(neuron2);
       n.addConnection(neuron1);
       neurons = (Neuron[])append(neurons, n);
     } else {
@@ -24,6 +27,14 @@ void initializeNeurons(){
       n.addConnection(neuron1);
     }
 
+  }
+  
+  // arrange neurons in a circle and set their fillcolor
+  for(int i = 0 ; i < neurons.length; i++){
+    float y = (width/2) + (width/2.5)*sin(i*(2*PI/neurons.length));
+    float x = (height/2) + (height/2.5)*cos(i*(2*PI/neurons.length));
+    neurons[i].position = new PVector(x,y);
+    neurons[i].fillColor = color( 255*i/(neurons.length-1), 255, 255, 10); 
   }
 
   //for (Neuron n : neurons) {

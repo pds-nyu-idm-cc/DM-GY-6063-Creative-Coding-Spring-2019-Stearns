@@ -2,12 +2,20 @@
 
 class Neuron {
   
-  PVector position;
-  PVector velocity;
-  PVector acceleration;
+  PVector position = new PVector();
+  PVector velocity = new PVector();
+  PVector acceleration = new PVector();
   String name;
   ArrayList<String> connections = new ArrayList<String>();
   float size=5;
+  float scaleDiv=5;
+  color strokeColor=color(255,50);
+  color fillColor;
+  
+  Neuron(String _name) {
+    name = _name;
+  }
+  
   Neuron(String _name, PVector _position) {
     name = _name;
     position=_position.copy();
@@ -22,17 +30,16 @@ class Neuron {
   boolean isAConnection(ArrayList<String> _list, String _name) {
     boolean isInList = false;
     for (String n : _list) {
-     
       isInList |=n.equals(_name);
     }
     return isInList;
   }
   
   void display(){
-    stroke(127);
+    stroke(strokeColor);
     strokeWeight(0);
-    fill(255);
-    circle( position.x,position.y, size+(size*connections.size()/12));
+    fill(fillColor);
+    circle( position.x,position.y, size+(size*connections.size()/scaleDiv));
   }
   
   void showName(){

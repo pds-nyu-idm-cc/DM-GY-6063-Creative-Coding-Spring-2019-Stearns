@@ -2,6 +2,7 @@ class Connection{
   
   Neuron head;
   Neuron tail;
+  color strokeColor=color(255,25);
   
   Connection(Neuron _head, Neuron _tail){
     head = _head;
@@ -9,12 +10,10 @@ class Connection{
   }
   
   void display(){
-    stroke(255,25);
-    strokeWeight(.75);
+    stroke(color(hue(head.fillColor),191,255,96));
+    strokeWeight(0.5);
     line(head.position.x, head.position.y, tail.position.x,tail.position.y);
     head.display();
     tail.display();
   }
-  
-  
 }

@@ -18,39 +18,23 @@ Connection[] connections = new Connection[0];
 
 void setup() {
   size(800, 800);
-
+  colorMode(HSB, 255);
+  
   initializeNeurons();
   
-  for(Neuron n: neurons){
-    for(String name : n.connections){
-      if(!connectionExists(n.name,name)){
-      connections = (Connection[])append(connections, new Connection(neurons[whichNeuron(n.name)], neurons[whichNeuron(name)]));
-      }
-    }
-  }
+  initializeConnections();
   
-  background(64);
   println("Neurons in dataset: "+neurons.length);
   println("Connections between them: "+connections.length);
   
-  for(int i = 0 ; i < neurons.length; i++){
-    float y = (width/2) + (width/2.5)*sin(i*(2*PI/neurons.length));
-    float x = (height/2) + (height/2.5)*cos(i*(2*PI/neurons.length));
-    neurons[i].position = new PVector(x,y);
-  }
+  background(64);
   
-}
-
-boolean connectionExists(String _n1Name, String _n2Name){
-  for (Connection c : connections){
-    if ((c.head.name.equals(_n1Name) && c.tail.name.equals(_n2Name)) || (c.tail.name.equals(_n1Name) && c.head.name.equals(_n2Name))) return true;
-  }
-  return false;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
 void draw() {
+  
   background(64);
   
   for(Connection c : connections){
