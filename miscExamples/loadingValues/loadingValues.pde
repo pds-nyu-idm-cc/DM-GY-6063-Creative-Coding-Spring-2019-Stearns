@@ -1,16 +1,9 @@
 Table coordinates;
 
-void setup(){
-  
+void setup(){ 
 coordinates = loadTable("coordinates.lst" ,"csv");
-
   println(coordinates.getRowCount() + " total rows in table"); 
-
-  for (TableRow coordinate : coordinates.rows()) {
-    
-    coordinate.getInt(0);
-    coordinate.getInt(1);
-    
+  for (TableRow coordinate : coordinates.rows()) {   
     println("x: "+coordinate.getInt(0)+", y: "+coordinate.getInt(1));
   }
 }
