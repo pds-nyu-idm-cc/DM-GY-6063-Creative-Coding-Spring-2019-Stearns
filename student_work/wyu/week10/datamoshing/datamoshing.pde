@@ -18,7 +18,7 @@ void setup() {
   copy_y = 0;
   paste_x = width/2;
   paste_y = height/2;
-  ///////////////////scalling
+  ///////////////////scalling????
   size(500, 500);
   surface.setResizable(true);
   img = loadImage("milkyway.jpg");
