@@ -7,17 +7,13 @@ float blue;
 
 void setup() {
   size (500, 700);
-  //rect_height = int(height/random(10, 25));
-  //base = color(random(10, 245), random(10, 245), random(10, 245));
-  //red = red(base);
-  //green = green(base);
-  //blue = blue(base);
 }
 
 void draw() { 
   //inspired by Agnes Martin's work
   //divide the canvas with rectangles that take the full width
   //from a base colour, generate an alternative colour by only variating the amount of red)
+  
   rect_height = int(height/random(10, 25));
   generateRectangles(rect_height);
 }
