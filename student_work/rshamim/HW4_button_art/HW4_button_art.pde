@@ -106,6 +106,7 @@ int circleLogic() {
 
   if (mouseIsOver()) isClicked=!isClicked;
 }
+  }
 
   return (dist(x, y, mouseX, mouseY) < size/2);
   
@@ -135,6 +136,4 @@ void styleCircle1(boolean _mouseIsOver) {
 
 boolean mouseIsOver() {
   return (dist(x1, y1, mouseX, mouseY) < size/2);
-}
-
 }
