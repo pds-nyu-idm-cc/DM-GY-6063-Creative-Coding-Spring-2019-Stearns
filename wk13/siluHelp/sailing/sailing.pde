@@ -1,5 +1,6 @@
 /**
- Its posible to use translate to pushMatrix and popMatrix along with translate to create complex motion
+ Move a square slowly from start to end when
+ we press any key
  */
 
 // Declare a Boat named boat
