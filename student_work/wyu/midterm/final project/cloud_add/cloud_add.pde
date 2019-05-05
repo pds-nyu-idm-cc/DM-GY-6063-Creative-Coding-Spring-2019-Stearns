@@ -30,9 +30,9 @@ void draw() {
   if (gameScreen == 0) {
     initialScreen();
   } else if (gameScreen == 1) {
-    
+
     playScreen();
-    
+
 
     fill(#f68680);
     //for (int i=0; i<5; i++){
@@ -99,7 +99,7 @@ void playScreen() {
     //  bird.display();
     //  bird.update();
     //}
-    image(cloud,200,100);
+    image(cloud, 200, 100);
   } 
 
 
