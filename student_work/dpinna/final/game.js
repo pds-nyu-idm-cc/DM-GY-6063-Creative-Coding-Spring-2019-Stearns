@@ -13,28 +13,46 @@ var obj_d;
 var obj_e;
 var obj_f;
 var defaultFrameRate = 25;
-let plane;
+let plane = 'biplane';
+var selected_plane;
+var show_obstacles = true;
 let img;
 var game_level = 0;
 let lighthouse;
 let biplane;
+var light = true;
+let posEasing = 0.125;
+let focEasing = 0.25;
+
+var cam1CurrentPos = [0.0, 0.0, 0.0];
+var cam1CurrentFoc = [0.0, 0.0, 0.0];
+
+var cam1TargetPos = [0.0, 0.0, 520.0];
+var cam1TargetFoc = [0.0, 0.0, -side / 2];
 
 function preload() {
 
   //pre-loading obj files and textures
-  //they don't look great, but they provide a better understanding
-  //of what kind of objects are they
 
   biplane = {
-    model: loadModel('plane/plane.obj', true),
-    material: loadImage('plane/plane.png'),
-    hit: loadImage('plane/hit.png'),
+    model: loadModel('objects/plane/plane.obj', true),
+    material: loadImage('objects/plane/plane.png'),
     rot_X: 10,
     rot_Y: 268,
     rot_Z: 266,
     tr_X: 0,
     tr_Y: 80,
     tr_Z: 100
+  }
+
+  jet = {
+    model: loadModel('objects/jet/Jet_01.obj', true),
+    rot_X: 0,
+    rot_Y: 0,
+    rot_Z: 0,
+    tr_X: 0,
+    tr_Y: 0,
+    tr_Z: 0
   }
 
   lighthouse = {
@@ -77,59 +95,123 @@ function setup() {
   engine.play();
   engine.loop();
 
-  //adding a few lines that will specify the starting and ending
+  // adding a few 'lines' that will specify the starting and ending
   // points where the objects will appear and disappear.
   for (var i = -300; i <= 500; i += 1) {
     lines_y.push(i);
   }
+
+  cam1 = createCamera();
+  currentCamera = 1;
+  textFont(text_font, 50);
+  textAlign(CENTER, CENTER);
 }
 
 
 function draw() {
   if (game_level == 0) {
     clear();
-    background(4, 50, 76);
-    textSize(32);
-    textAlign(CENTER);
-    textFont(text_font);
-    fill('white');
-    text("The little Biplane that could", 0, 0);
-    textSize(24);
-    text("Play", 0, 80);
-    kick_off();
+    //Showing the 3d UI with the settings to change
+    background(200);
+    drawBoxes();
+
+    for (var i = 0; i < 3; i++) {
+      cam1CurrentPos[i] += ease(cam1CurrentPos[i], cam1TargetPos[i], posEasing);
+      cam1CurrentFoc[i] += ease(cam1CurrentFoc[i], cam1TargetFoc[i], focEasing);
+    }
+
+    cam1.setPosition(cam1CurrentPos[0], cam1CurrentPos[1], cam1CurrentPos[2]);
+    cam1.lookAt(cam1CurrentFoc[0], cam1CurrentFoc[1], cam1CurrentFoc[2]);
+
+    // key '1'
+    if (keyIsDown(49)) {
+      plane = 'jet';
+      var selected_plane = plane
+    }
+
+    // key '2'
+    if (keyIsDown(50)) {
+      show_obstacles = false;
+    }
+
+    // key '3'
+    if (keyIsDown(51)) {
+      light = false;
+    }
+
+    // key 'enter'
+    if (keyIsDown(13)) {
+      cam1TargetPos = [0.0, 0.0, 520.0];
+      cam1TargetFoc = [0.0, 0.0, -side / 2];
+      game_level = 1;
+
+    }
+
+    // key 'enter'
+    if (keyIsDown(27)) {
+      game_level = 0;
+
+    }
+
   }
 
   if (game_level == 1) {
     clear();
     move_model();
     rotateX(PI / 3);
-    orbitControl();
 
     // showtime
-    // show_score(); //text is treated as a 3d item and words are rotated
-    ambientLight(200, 200, 200);
-    show_background();
-    show_objects();
-    show_biplane();
-    calculate_collision();
+    show_score();
+    if (light == true) {
+      ambientLight(250);
+    } else {
+      ambientLight(2);
+    }
 
+    show_background();
+
+    if (show_obstacles == true) {
+      show_objects();
+    } else {}
+
+    show_biplane();
   }
 
 }
 
-function kick_off() {
-  if (mouseIsPressed) {
-    if (mouseButton == LEFT) {
-      game_level = 1;
-    }
+function keyTyped() {
+  switch (key) {
+    case 'd':
+      cam1TargetPos = [-300.0, 0.0, 0.0];
+      cam1TargetFoc = [-side / 2, 0.0, 0.0];
+      break;
+    case 's':
+      cam1TargetPos = [0.0, 0.0, 520.0];
+      cam1TargetFoc = [0.0, 0.0, -side / 2];
+      break;
+    case 'a':
+      cam1TargetPos = [300.0, 0.0, 0.0];
+      cam1TargetFoc = [side / 2, 0.0, 0.0];
+      break;
+    case 'x':
+      cam1TargetPos = [0.0, -520.0, 0.0];
+      cam1TargetFoc = [0.0, 0.0, -side / 2];
+      break;
   }
+}
 
+// simple
+function ease(_current, _target, _factor) {
+  return (_target - _current) * _factor;
+}
+
+function kick_off() {
   if (keyIsDown(ENTER)) {
     game_level = 1;
   }
 }
 
-function show_objects(){
+function show_objects() {
   if (frameCount > 25 && a <= lines_y.length) {
     // remove push and pop the whole camera scene moves.
     obj_a = show_object(lighthouse, -450, lines_y[a]);
@@ -170,15 +252,25 @@ function show_objects(){
 
 function show_biplane() {
   //setting initial biplane position front-facing and leveled.
-  push();
-  rotateX(radians(biplane.rot_X));
-  rotateY(radians(biplane.rot_Y));
-  rotateZ(radians(biplane.rot_Z));
-  translate(biplane.tr_X, biplane.tr_Y, biplane.tr_Z)
-  texture(biplane.material);
-  model(biplane.model);
-  pop();
-  // console.log(position());
+  if (plane == 'biplane') {
+    push();
+    rotateX(radians(biplane.rot_X));
+    rotateY(radians(biplane.rot_Y));
+    rotateZ(radians(biplane.rot_Z));
+    translate(biplane.tr_X, biplane.tr_Y, biplane.tr_Z)
+    texture(biplane.material);
+    model(biplane.model);
+    pop();
+  } else {
+    model(jet.model);
+    push();
+    rotateX(radians(jet.rot_X));
+    rotateY(radians(jet.rot_Y));
+    rotateZ(radians(jet.rot_Z));
+    translate(jet.tr_X, jet.tr_Y, jet.tr_Z)
+    model(jet.model);
+    pop();
+  }
 }
 
 function reset_biplane() {
@@ -194,7 +286,7 @@ function show_background() {
   noStroke();
   //ground-plane
   fill(4, 50, 76) //navy-ish blue
-  rect(-1200, -400, 2400, 1100)
+  rect(-2400, -800, 4800, 1900)
   noStroke();
   //placing the sky as a sphere
   texture(sky2);
@@ -214,93 +306,63 @@ function move_model() {
   }
   if (keyIsDown(RIGHT_ARROW)) {
     biplane.tr_Z -= 5;
+    jet.tr_Z -= 5;
     biplane.rot_Y += 0.2;
+    jet.rot_Y += 0.2;
   }
 
   if (keyIsDown(LEFT_ARROW)) {
     biplane.tr_Z += 5;
+    jet.tr_Z += 5;
     biplane.rot_Y -= 0.2;
+    jet.rot_Y -= 0.2;
 
   }
 
   if (keyIsDown(UP_ARROW)) {
-      biplane.tr_X += 5;
-
-  } else {
-    // biplane.tr_X += -2;
+    biplane.tr_X += 5;
+    jet.rot_X += 5;
   }
 
-
   if (keyIsDown(DOWN_ARROW)) {
-      biplane.tr_X -= 5;
+    biplane.tr_X -= 5;
+    jet.tr_X -= 5;
   }
 
   if (keyIsDown(65)) { //button a
-
-    if (biplane.rot_X < 24) {
-      biplane.rot_X += 2;
-    }
-
+    biplane.rot_X += 2;
+    jet.rot_X += 2
   }
 
   if (keyIsDown(68)) { //button d
-
-    if (biplane.rot_X <= 24 && biplane.rot_X > 0) {
-      biplane.rot_X -= 2;
-    }
-
+    biplane.rot_X -= 2;
+    jet.rot_X -= 2;
   }
 
   if (keyIsDown(90)) { //button z
-    if (biplane.rot_Z < 300 && biplane.rot_Z >= 250) {
-      biplane.rot_Z += 2;
-    }
+    biplane.rot_Z += 2;
+    jet.rot_Z += 2;
 
   }
 
   if (keyIsDown(67)) { //button c
-    if (biplane.rot_Z <= 300 && biplane.rot_Z > 250) {
-      biplane.rot_Z -= 2;
-    }
+    biplane.rot_Z -= 2;
+    jet.rot_Z -= 2;
 
   }
 
   if (keyIsDown(69)) { //button q
-    // if (biplane.rot_Y < 300 && biplane.rot_Y >= 250) {
-      biplane.tr_Y += 3;
-    // }
+    biplane.tr_Y += 3;
+    jet.tr_Y += 3;
 
   }
   if (keyIsDown(81)) { //button e
-    // if (biplane.tr_Y <= 300 && biplane.rot_Y > 250) {
-      biplane.tr_Y -= 3;
-    // }
-
+    biplane.tr_Y -= 3;
+    jet.tr_Y -= 3;
   }
-
-  if (keyIsDown(49)) { //button e
-      texture(biplane.hit);
-
-      console.log("hit");
-
-  } else {
-    // biplane.material == fill(255)
-  }
-
 
 }
 
-function calculate_collision(){
-
-  // console.log("distance: "+dist(0,0,0,biplane.tr_X,biplane.tr_Y,biplane.tr_Z))
-  // console.log("x "+dist(biplane.tr_X,biplane.tr_Y,)/
-  // dist(x1,y1,[z1],x2,y2,[z2])
-  // console.log("y "+biplane.tr_Y)
-  // console.log("z "+biplane.tr_Z)
-  // console.log("y: "+obj_a.y);
-  // console.log(dist(obj_a.x,obj_a.y,biplane.tr_X,biplane.tr_Y));
-
-}
 
 function show_object(object, pos_x, pos_y) {
   push()
@@ -309,21 +371,26 @@ function show_object(object, pos_x, pos_y) {
   texture(object.material);
   model(object.model);
   pop();
-  return {x: pos_x, y: pos_y};
+  return {
+    x: pos_x,
+    y: pos_y
+  };
 }
 
 
 function show_score() {
-  fill(40)
-  push()
-  rotateX(90);
-  // translate(100, -110, -315)
-  score = rect(0, 0, 150, 50);
-  score.position(0,0);
+  let miles = frameCount;
   textSize(26);
   textFont(text_font);
   textAlign(LEFT);
-  text(frameCount/10, 0, 0);
-  text("Miles flown", 40, 0);
+
+  push()
+  rotateX(4.974188368183839);
+  translate(90, -10, 355)
+  fill(40)
+  text(miles + "miles", 10, 10);
+  translate(0, 0, -1)
+  fill(255)
+  rect(0, 0, 120, 25);
   pop()
 }
