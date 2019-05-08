@@ -6,7 +6,7 @@ void rotating_freq () {
   
   translate(width/2, height/2);
 
-  //for (int o = 0; o<1; o++) {
+  
     for (int i=0; i<fft.specSize(); i++) {
       
       pushMatrix();
@@ -35,5 +35,5 @@ void rotating_freq () {
       //rect(-s, -s, 2*s, 2*s);
       popMatrix();
     }
-  //}
+  translate(-width/2, -height/2);
 }

@@ -62,19 +62,41 @@ void draw() {
 
   calculations();
 
-  if (key == '1') {
-    rotating_circles();
-  } else if (key == '2') {
-    rotating_freq();
-  } else if (key == '3') {
-    rotating_freq2();
-  } else if (key == '4') {
-    particles();
-  } else if (key == '0') {
-    strange();
-  } else {
-    freq();
+  switch(key){
+    case '0':
+      strange();
+      break;
+    case '1':
+      rotating_circles();
+      break;
+    case '2':
+      rotating_freq();
+      break;
+    case '3':
+      rotating_freq2();
+      break;
+    case '4':
+      particles();
+      break;
+    default:
+      freq();
+      break;
   }
+
+  //if (key == '1') {
+  //  rotating_circles();
+  //} else if (key == '2') {
+  //  rotating_freq();
+  //} else if (key == '3') {
+  //  rotating_freq2();
+  //} else if (key == '4') {
+  //  particles();
+  //} else if (key == '0') {
+  //  strange();
+  //} else {
+  //  freq();
+  //}
+
 }
 
 void calculations() {

@@ -45,4 +45,6 @@ void rotating_freq2() {
     popMatrix();
   }
   
+  translate(-width/2, -height/2);
+  
 }

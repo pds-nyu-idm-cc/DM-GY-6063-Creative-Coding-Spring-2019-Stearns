@@ -1,10 +1,11 @@
 void rotating_circles () {
   colorMode(RGB, 255);
-  //background(0);
+  
+  
   fill(0,20);
   rect(0,0,width,height);
-  translate(width/2, height/2);
   
+  translate(width/2, height/2);
 
   
   for (int o = 0; o<3; o++) {
@@ -35,6 +36,9 @@ void rotating_circles () {
       ellipse(0, 0, r, r);
       rect(-s, -s, 2*s, 2*s);
       popMatrix();
+      
     }
   }
+  
+  translate(-width/2, -height/2);
 }

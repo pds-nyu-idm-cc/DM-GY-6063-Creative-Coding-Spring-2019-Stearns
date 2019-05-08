@@ -12,7 +12,8 @@ class Circle {
   }
 
   void update() {
-    acc.y=(random(-1,1));
+    //acc.y=(random(-1,1));
+    acc.y=acc_y;
     vel.add(acc);
     pos.add(vel);
     vel.mult(0.99);
