@@ -1,27 +1,26 @@
 
     
-float x=100;
-float y=100;
-float size=50;
+float x=250;
+float y=250;
 boolean isClicked=false;
 
 float x1=250;
 float y1=250;
 float size=50;
 
-float circleStrokeWeightInactive=1;
-color circleStrokeColorInactive=color(0);
-color fillColorInactive=color(240, 154, 13);
+////float circleStrokeWeightInactive=1;
+//color circleStrokeColorInactive=color(0);
+//color fillColorInactive=color(240, 154, 13);
 
-float circleStrokeWeightHighlighted=0;
-color circleStrokeColorHighlighted=color(240, 154, 13);
-color fillColorHighlighted=color(255);
+//float circleStrokeWeightHighlighted=0;
+//color circleStrokeColorHighlighted=color(240, 154, 13);
+//color fillColorHighlighted=color(255);
 
 float circleStrokeWeightPressed=1;
 color circleStrokeColorPressed=color(255);
 color fillColorPressed=color(100, 15, 16);
 
-color backgroundColor=color(240, 13, 154);
+//color backgroundColor=color(240, 13, 154);
 
 float circleStrokeWeightInactive=1;
 color circleStrokeColorInactive=color(0);
@@ -104,19 +103,19 @@ int circleLogic() {
     } else {
       return 0; // inactive
 
-  if (mouseIsOver()) isClicked=!isClicked;
-}
+     //if (mouseIsOver()) isClicked=!isClicked;
+    }
   }
 
-  return (dist(x, y, mouseX, mouseY) < size/2);
+  //return (dist(x, y, mouseX, mouseY) < size/2);
   
 
-  drawCircle();
+ // drawCircle();
 }
 
 void drawCircle1() {
   styleCircle1(mouseIsOver());
-  circle1(x1, y1, size);
+  circle(x1, y1, size);
 }
 
 void styleCircle1(boolean _mouseIsOver) {
