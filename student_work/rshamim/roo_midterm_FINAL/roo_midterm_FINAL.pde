@@ -30,7 +30,7 @@ void draw()
   float posx = map(player.position(), 0, player.length(), 0, width);
   float posPercentage = map(player.position(), 0, player.length(), 0, 100);
   
-     // line( x1, 50 + player.left.get(i)*50, x2, 50 + player.left.get(i+1)*50 );
+     // line( x1, 50 + player.left.get(i)*50, x2, 50 + player.left.get(i+1)*50 ); //<>//
       //line( x1, 150 + player.right.get(i)*50, x2, 150 + player.right.get(i+1)*50 );
      
 
@@ -70,12 +70,17 @@ fill (231,153,130);
  
  // i don't really understand the math. trial and error
       stroke (255);
-      circle( x1, 180, 20 + player.right.get(i)*50);
+      circle( x1, 180, 20 + player.right.get(i)*25);
       stroke (96,143,192);
       circle (x1, x1-180, 15 + player.right.get(i)*50);
       stroke (227,186,96);
-      circle (x1, 500-x1, 15 + player.right.get(i)*50);
+      circle (x1, 500-x1, 15 + player.right.get(i)*100);
   }
+  
+  circle( 0, 180, 20 + player.right.get(0)*25);
+  circle( 1, 180, 20 + player.right.get(1)*25);
+  circle( 2, 180, 20 + player.right.get(2)*25);
+  circle( 3, 180, 20 + player.right.get(3)*25);
   
   //beatdetect element
   stroke(255);
