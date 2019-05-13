@@ -6,7 +6,7 @@
 float color1, color2, color3; 
 PImage bg;
 //I dont know why the zero is not changing but the increments
-int cost;
+int cost=0;
 int rate = 1;
 int radius = 25;
 
@@ -20,13 +20,13 @@ void setup() {
 
 
 void draw () {
-  if ((mousePressed) && (mouseY < 600) && (mouseX > 210)) {  //detecta el click del mouse y analiza la posicion 
+  if ((mousePressed) && (mouseY < 600) && (mouseX > 210)) {
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
   
   //cost
   textSize(20);
-  text(cost, 35, 650);
+  text(+ cost, 35, 650);
   text("$", 22, 650);
   text("Total", 20,600);
   text("Cost", 23,625);
@@ -41,7 +41,9 @@ void mousePressed() {
   //But it messed up my entire interface
   //So I took it off and let the overlay just happen
   //fill(255);
-  cost++;
+  {   
+      cost = cost +10;     
+    }
   
   //white
   if (mouseX >=20 && mouseX <= 60 && mouseY >= 10 && mouseY <= 50 ) {  
