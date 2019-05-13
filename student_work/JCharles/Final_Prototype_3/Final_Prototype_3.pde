@@ -2,7 +2,7 @@ int i=200;
 int j=100;
 
 void setup(){
-  size(500,500);
+  size(600,600);
 }
 
 
@@ -19,4 +19,15 @@ void draw(){
   fill(#FFFF00);
   ellipse(100,70,70,70);
   fill(#228B22);
+  
+  fill(255,255,255);
+  ellipse(100,60,60,60);
+  ellipse(145,60,90,80);
+  ellipse(190,60,58,58);
+  //cloud 1
+  
+  
+  ellipse(400,60,60,60);
+  ellipse(445,60,90,80);
+  ellipse(490,60,58,58);
 }

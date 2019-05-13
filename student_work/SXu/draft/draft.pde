@@ -2,6 +2,11 @@
  moving picture of painting Nihonbashi
  */
 
+//soundfiles
+import processing.sound.*;
+SoundFile file1;
+SoundFile file2;
+
 // how many images 
 int qtyImages = 13;
 
@@ -19,9 +24,9 @@ int[] posY = new int[qtyImages];
 Table coordinates;
 
 //boat movement
-floating b1, b2, b3, b4;
-ArrayList <floating> group;
-
+Floating b1, b2, b3, b4, b5, b6;
+ArrayList <Floating> group;
+//float st = random(0, 100);
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -29,7 +34,10 @@ ArrayList <floating> group;
 
 void setup () {
   size(10, 10);
-  group = new ArrayList <floating>();
+  file1 = new SoundFile(this, "sound/The Sound of Wind Through the Bamboo Leaves.mp3");
+  file2 = new SoundFile(this, "sound/watersound.mp3");
+  file1.play();
+  group = new ArrayList <Floating>();
 
   // loads and scales all the images
   initializeImages();
@@ -37,26 +45,20 @@ void setup () {
   // loads coordinate presents
   initializeCoordinates();
 
-  //b4 = new moveforward(); 
-  //b4.pos = new PVector(posX[2], posY[2]);
-  ////images[0].img
-  //b4.img = images[2];
 
-  b1 = new floating(); 
-  b1.type="boat";
-  b1.pos = new PVector(posX[1], posY[1]);  
-  b1.img=images[1];
+  //  b1 = new Floating(); 
+  //  b1.type="boat";
+  //  b1.pos = new PVector(posX[1], posY[1]);  
+  //  b1.img=images[1];
+  b1 = new Floating( posX[1], posY[1], "BOAT", images[1]);
+  b2 = new Floating( posX[3], posY[3], "BOAT", images[3]);
+  b3 = new Floating( posX[4], posY[4], "BOAT", images[4]);
 
+  b4 = new Floating( posX[5], posY[5], "BOAT2", images[5]);
+  b5 = new Floating( posX[6], posY[6], "BOAT2", images[6]);
+ b6 = new Floating( posX[2], posY[2], "f", images[2]);
 
-  b2 = new floating(); 
-  b2.type="boat";
-  b2.pos = new PVector(posX[3], posY[3]);
-  b2.img=images[3];
-
-  b3 = new floating(); 
-  b3.type="boat";
-  b3.pos = new PVector(posX[4], posY[4]);
-  b3.img=images[4];
+  //b6 = new Floating(277, 664, posX[2], posY[2], "BOAT", images[2]);
 
   group.add (b1);
   group.add (b2);
@@ -78,27 +80,43 @@ void draw() {
   //}
 
 
-  //drawBackground();
-  b1.drawimg();
-  b1.update();
-  b2.update();
-  b2.drawimg();
-  b3.drawimg();
-  b3.update();
-  //b4.setup();
+  //drawBackgroundobj();
+  b1.move();
+  b1.display();
+  b2.move();
+  b2.display();
+  b3.move();
+  b3.display();
+
+  b4.updown();
+  b5.updown();
+  
+  //  b6.move();
+  //b6.display();
+b6.f(500,700);
+b6.display();
+b6.move();
+
   whereAmI();
 
-  for (floating obj : group ) {
-    if (obj.isMouseInRange() == true) {
-      circle(obj.pos.x, obj.pos.y, 20);
-    }
-  }
+  //for (Floating obj : group ) {
+  //  if (obj.isMouseInRange() == true) {
+  //    circle(obj.pos.x, obj.pos.y, 20);
+  //  }
+  //}
 }
 
 void mousePressed() {
-  for (floating obj : group ) {
+  ////another method
+  //for (int i =0; i < len(group);++i){
+  //  group[i].
+  //}
+
+  for (Floating obj : group ) {
     if (obj.isMouseInRange() == true) {
-      obj.pos.y+=20;
+      obj.pos.y+=5;
+      file2.play();
+      b6.sailing = !b6.sailing;
     }
   }
 }
@@ -155,6 +173,6 @@ void initializeCoordinates() {
     posX[i] = coordinate.getInt(0);
     posY[i] = coordinate.getInt(1);
 
-   // println("x: "+posX[i]+", y: "+posY[i]);
+    // println("x: "+posX[i]+", y: "+posY[i]);
   }
 }
