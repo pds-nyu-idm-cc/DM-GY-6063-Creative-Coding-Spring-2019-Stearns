@@ -1,11 +1,6 @@
-////////////////////this is the codes of a game, which is from a traditional Chinese legend//////////////////////
-////////////////////use the ArrayList to present moving objects///////////
-////////////////////press 'W' to control the bird upward//////////////
-////////////////////press 'S' to control the bird upward//////////////
- 
 PImage cloud;
-//import processing.sound.*;
-//SoundFile file;
+import processing.sound.*;
+SoundFile file;
 //import ddf.minim.*;
 //Minim minim;
 //AudioSample water;
@@ -25,15 +20,12 @@ boolean gameover= false;
 botton b;
 Bird bird;
 void setup() {
-  ///////////////////////////////musice/////////////////////////////
   //file = new SoundFile(this, "music.mp3");
   ////file.play();
   //minim = new Minim(this);
-  //file = new SoundFile(this, "backgroundmusic1.mp3");
-  //file.play();
+   file = new SoundFile(this, "backgroundmusic1.mp3");
+   file.play();
   //water = minim.loadSample("backgroundmusic1.mp3");
-
-  ///////////////////////////////other settings/////////////////////////////
   cloud=loadImage("cloud2.png");
   tubes = new ArrayList<Tube>();
   terrain = new float[w+2];
@@ -48,14 +40,14 @@ void setup() {
   //  tubes.add(new Tube());
 }
 void draw() {
-  // ///////////////////////////////the logic of the game/////////////////////////////
+  // the logic of the game
   if (gameScreen == 0) {
     initialScreen();
   } else if (gameScreen == 1) {
     //fill(255);
     //file.play();
     playScreen();
-    ///////////////text of playscreen/////////////
+    //text
     textAlign(LEFT);
     fill(#f68680);
     textSize(20);
@@ -71,27 +63,21 @@ void draw() {
 //endScreen();
 //}
 
-
+//drop stones
 void mouseReleased() {
-  ///////////inital page present///////////////
   b.pop();
   if (gameScreen ==0) {
     startgame();
   }
-
-  ////////////bird drop stones/////////////////
   if ( bird.isClicked() ) {
     dropStone();
     score++;
   }
-
-  //////////////gameover setting/////////////////
   if (gameover) {
     gameover = false;
     life = 3;
   }
 }
-
 //void keyPressed(){
 
 //if ( bird.isClicked() ) {
@@ -102,9 +88,7 @@ void mouseReleased() {
 //void dropStone() {
 //stones.add(new Stone(new PVector(mouseX, mouseY)));
 //}
-
-
-//////////////stone statues///////////////////
+//stone statues
 void stoneStatues() {
   for (int i = stones.size()-1; i>=0; i--) {
     Stone p = stones.get(i);
@@ -115,8 +99,7 @@ void stoneStatues() {
     //}
   }
 }
-
-/////////////initial screen///////////////////
+//initial screen
 void initialScreen() {
   background(#fdeed7);
   b.display();
@@ -128,7 +111,7 @@ void initialScreen() {
   text("Click the botton to start", width/2, height-30);
 }
 
-///////////play screen////////////////////
+//play screen
 void playScreen() {
   //water.trigger();
   //background
@@ -136,12 +119,11 @@ void playScreen() {
   addRandomTube();
   terrain();
   ////fill(#FFD985);
+  //tubes settings: color / move / hit / remove
   fill(#FFD985);
-  //////////the display of bird////////////
+  //the display of bird
   bird.display();
   bird.update();
-
-  //////////////tubes settings: color / move / hit / remove//////////////////////
   for (Tube o : tubes) {
     o.move();
     o.display();
@@ -157,21 +139,18 @@ void playScreen() {
       }
     }
   }
-  
-//////////////sky and cloud//////////////////
+  //sky and cloud
   image(cloud, 200, 100);
   //the display of bird
-  //bird.display();
-  //bird.update();
-  
-/////////////the display of all stones/////////////
+  bird.display();
+  bird.update();
+  //the display of all stones
   stoneStatues();
   for (Stone stones : stones) {
     stones.display();
   }
 }
-
-//////////////////endgame screen//////////////////
+//endgame screen
 void endScreen() {
   background(#fdeed7);
   textAlign(CENTER);
@@ -184,7 +163,7 @@ void endScreen() {
   text("Click Anywhere to Restart", width/2, height-100);
 }
 
-///////////////////other contents function////////////////
+//other contents function
 void startgame() {
   gameScreen=1;
 }
@@ -194,7 +173,6 @@ void startgame() {
 //void restart() {
 //  gameScreen=1;
 
-//////////////////terrain settings/////////////////////
 void terrain() {
   //background build
   float sky = map(bird.location.x, 0, width, 255, 0);
@@ -217,7 +195,6 @@ void terrain() {
   endShape();
 }
 
-/////////////////////add tubes////////////////////////////
 void addRandomTube() {
   if (random(1) < thr ) {
     println("should create a new obstacle");
@@ -225,7 +202,6 @@ void addRandomTube() {
   }
 }
 
-/////////////////////key settings//////////////////////
 void keyPressed() {
   if (key == 'w') {
     bird.up();
