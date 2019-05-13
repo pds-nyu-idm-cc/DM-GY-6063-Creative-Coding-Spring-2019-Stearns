@@ -1,4 +1,4 @@
-class Particle { // initialise the new object (speed, force, distance, size)
+class Particle { // initialise the new object
   float particledistance = 50;
   float particlespeed = 4.0;
   float particleforce = 0.1;
@@ -18,8 +18,9 @@ class Particle { // initialise the new object (speed, force, distance, size)
   void particle_move() { // move the particles and make sure it slows down 
     float proximity = 1.0;
     float distance = dist(pos.x, pos.y, target.x, target.y);
-    if (distance < 50) proximity = distance/particledistance;
-    
+    if (distance < 50) {
+      proximity = distance/particledistance;
+    }
     // apply velocity to the particles
     PVector target_vel = new PVector(target.x, target.y);
     target_vel.sub(pos);
