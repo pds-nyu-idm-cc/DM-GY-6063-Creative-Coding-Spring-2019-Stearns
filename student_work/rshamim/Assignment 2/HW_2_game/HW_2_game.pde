@@ -7,8 +7,8 @@ float bally=0;
 float ball2x= 400;
 float ball2y=0;
 float score =0;
-float goal1x=
-float goal2;
+float goal1x;
+float goal2x;
 
 void setup () {
   size (500, 500);
@@ -104,12 +104,12 @@ void draw (){
   circle(275, 225, 7);
   
   //define goal1
-  goal 
+ // goal 
   
   //define goal2
   
   // reach goal increase score
-  if (ball
+  //if (ball
   
   
  
