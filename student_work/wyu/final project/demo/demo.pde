@@ -1,4 +1,5 @@
 PImage cloud;
+float terrainhei;
 import processing.sound.*;
 SoundFile file;
 //import ddf.minim.*;
@@ -23,8 +24,8 @@ void setup() {
   //file = new SoundFile(this, "music.mp3");
   ////file.play();
   //minim = new Minim(this);
-   file = new SoundFile(this, "backgroundmusic1.mp3");
-   file.play();
+  //file = new SoundFile(this, "backgroundmusic1.mp3");
+  //file.play();
   //water = minim.loadSample("backgroundmusic1.mp3");
   cloud=loadImage("cloud2.png");
   tubes = new ArrayList<Tube>();
@@ -76,6 +77,7 @@ void mouseReleased() {
   if (gameover) {
     gameover = false;
     life = 3;
+    score = 0;
   }
 }
 //void keyPressed(){
@@ -139,6 +141,9 @@ void playScreen() {
       }
     }
   }
+  if (bird.isTouchedWater(terrainhei)) {
+    gameover = true;
+  }
   //sky and cloud
   image(cloud, 200, 100);
   //the display of bird
@@ -191,7 +196,9 @@ void terrain() {
   vertex(0, height);
   for (int i=-1; i<terrain.length-1; i++) {
     vertex(i*width/w, terrain[i+1]+height/2);
+    terrainhei = terrain[i+1]+height/2;
   }
+
   endShape();
 }
 

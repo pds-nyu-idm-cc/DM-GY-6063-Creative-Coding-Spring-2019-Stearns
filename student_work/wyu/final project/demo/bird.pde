@@ -29,7 +29,11 @@ class Bird {
     image(bird, location.x, location.y);
     //position = new PVector(xpos, ypos);
   }
-
+  
+Boolean isTouchedWater(float watery) {
+  float water = watery;
+  return (location.y >= water);
+}
   void up() {
     location.y = location.y-10;
   }
