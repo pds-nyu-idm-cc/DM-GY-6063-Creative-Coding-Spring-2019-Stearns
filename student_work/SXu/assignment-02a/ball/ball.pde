@@ -1,21 +1,26 @@
 int x=250;
 int y=250;
 int bgcolor = 0;
+PImage img;
+
 void setup(){
 
   // set screen size
-  size(500, 500);
+  size(600, 600);
   
   // set starting background color
   background(255);
 
+ // loadImage
+  img = loadImage("mountain.png");
 }
+ 
 
 void draw(){
   background(bgcolor);
   bgcolor++;
   // blank out canvas
-  
+   image(img, 0, 0);
   
   // style our shape
   strokeWeight(1);
