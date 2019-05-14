@@ -1,6 +1,8 @@
 void strange () {
   colorMode(RGB, 255);
-  background(0);
+  noStroke();
+  fill(0,50);
+  rect(0,0,width,height);
   strokeWeight(2);
   stroke(255, 211, 79);
   fft.forward(audio.mix);
@@ -12,10 +14,6 @@ void strange () {
 
     pushMatrix();
     rotate( (frameCount*.05  + 2*PI/(fft.specSize())*i)* -1);
-
-    // ellipse(0,0,r,r);
-    // fill(255,0,0);
-    // rect(0,0,s,s);
 
     translate(100+map(dist, 0, 6, 0, 50), 0);
 
@@ -32,8 +30,6 @@ void strange () {
     line(0, 0, 0, waveHeight); 
 
     fill(255, 0, 0);
-    //ellipse(0, 0, r, r);
-    //rect(-s, -s, 2*s, 2*s);
     popMatrix();
 
     pushMatrix();
