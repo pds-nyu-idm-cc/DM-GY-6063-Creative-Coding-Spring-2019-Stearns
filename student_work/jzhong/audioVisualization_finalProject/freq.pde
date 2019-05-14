@@ -1,13 +1,16 @@
 void freq () {
-  background(0);
-
+  colorMode(RGB,255);
+  
+  noStroke();
+  fill(0,50);
+  rect(0,0,width,height);
+  
   fft.forward(audio.mix);
-
+  
+  colorMode(HSB,100);
   stroke(random(0, 100), random(15, 60), random(75,100));
 
   for (int i = 0; i < fft.specSize(); i++) {
-    //c += i;
-    colorMode(HSB, 100);
     
     if(mousePressed){
       stroke(map(mouseX, 0, width, 0, 100), map(mouseY, 0, height, 25, 75), 100);

@@ -4,6 +4,7 @@ class Button {
   color c;
   String s;
 
+  //receiving variables from setup
   Button(float newX, float newY, color newC, String newS) {
     x = newX;
     y = newY;
@@ -24,12 +25,13 @@ class Button {
     text(s, x, y+5);
   }
 
+  //here I used the easing learned from a Processing example
   void choose() {
     targetX = width/2;
     targetY = 125;
 
-    dx = targetX - x;
-    x += dx * easing;
+    dx = targetX - x; //calculating the distance between the current position and the target position
+    x += dx * easing; //dx * easing will make the movement slower gradually, like adding an acceleration (or deceleration) to the speed
 
     dy = targetY - y;
     y += dy * easing;

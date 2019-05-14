@@ -1,6 +1,6 @@
 float d;
-boolean mousePress = false;
-//change
+float r = 80;
+color c;
 
 void setup() {
   background(255);
@@ -10,17 +10,15 @@ void setup() {
 void draw() {
   noStroke();
   d = dist(width/2, height/2, mouseX, mouseY);
-
-  if (d < 40) {
-    fill(38, 77, 119);
-  } else if (mousePress == true) {
-    fill(0);
+  
+  if (d < r/2 && mousePressed == false) {
+    c = color (38, 77, 119);
+  } else if (d < r/2 && mousePressed == true) {
+    c = color (235,145,174);
   } else {
-    fill(190);
+    c = color (100);
   }
-  circle(width/2, height/2, 80);
-}
-
-void mousePressed() {
-  mousePress = true;
+  
+  fill(c);
+  circle(width/2, height/2, r);
 }
