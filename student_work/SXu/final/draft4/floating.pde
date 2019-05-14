@@ -4,7 +4,9 @@ class Floating {
   //String type = "boat";
   float st= random(0, 50);
 
-  boolean sailing = false;
+  boolean isBoatRotating = false;
+  boolean driving = false;
+
   float sailTime = 600.0; // how many frames should it take to get from start to finish
   float x, y, x2, y2, translateX = 0.0, translateY = 0.0; // x,y are where it actually is, x2, y2 and the end point, translateX and translateY add complex motion
   float xStep = 0.0; 
@@ -21,9 +23,11 @@ class Floating {
   float amp = 5;
   //left-right
   float rockAmt =0.015;
+  float r = 0;
+  float rstep = -0.01;
   String TYPE = "BOAT";
 
-  //constructor for case BOAT/BOAT2
+  //constructor
   Floating( float _x, float _y, String _type, PImage _img) {
 
     pos = new PVector(_x, _y);
@@ -31,22 +35,6 @@ class Floating {
     img = _img;
   }
 
-  /*
-Floating(float _x, float _y, float _x2, float _y2, String _type, PImage _img) {
-   
-   x=_x;
-   y=_y;
-   x2=_x2;
-   y2=_y2;
-   xStep = (x2 - x)/sailTime;
-   yStep = (y2 - y)/sailTime;
-   translateX=0;
-   translateY=0;
-   img = _img;
-   TYPE = _type;
-   }
-   
-   */
 
   //Floating() {
   //  //pos = new PVector(0, 0);
@@ -61,9 +49,9 @@ Floating(float _x, float _y, float _x2, float _y2, String _type, PImage _img) {
     pushMatrix();
     //translateX += xStep;
     //translateY += yStep;
-    translate(x+translateX, y+translateY);
+    translate(pos.x+translateX,pos.y+ translateY);
     rotate(rotateAngle);  
-    image(img, pos.x, pos.y);
+    image(img, 0,0 );
     // reset the translation
     translateX = 0;
     translateY = 0;
@@ -74,12 +62,10 @@ Floating(float _x, float _y, float _x2, float _y2, String _type, PImage _img) {
 
     switch(TYPE) {
     case "BOAT":
-
-      if (sailing) {
-
-        this.sail();
+      if (isBoatRotating==false){
+        this.leftright();
       }
-      this.rock();
+    
       this.bob();
       this.shake();
       break;
@@ -87,39 +73,75 @@ Floating(float _x, float _y, float _x2, float _y2, String _type, PImage _img) {
     case"BOAT2":
       this.updown();
       break;
+      
+     
 
-    case"f":
-      this.f(x2, y2);
+    case"DRIVE":
+      this.driving(430, 560);
+      //this.disappear();
+      this.updown();
       break;
+
+
+    case"BACK":
+      this.backforward();
+      break; 
 
     case "POEPLE":
+      this.mirror();
+
       break;
-    default:
-      println("TYPE: "+TYPE+" not recognized");
-      break;
+      //println("TYPE: "+TYPE+" not recognized");
     }
   }
 
   ////////////////////////////////////////////////////////////////////////////////
   //break down movement
-  void f(float x2, float y2) {
-    xStep = (x2 - x)/sailTime;
-    yStep = (y2 - y)/sailTime;
-    //translateX=0;
-    //translateY=0;
-    translateX += xStep;
-    translateY += yStep;
+
+  void backforward() {
+    pushMatrix();
+    translate(sin(st + frameCount/80.)*5, 0);
+    image(img, pos.x, pos.y);
+    popMatrix();
+  }
+
+  void mirror() {
+    image(img, pos.x, pos.y);
   }
 
 
-  void sail() {
-
-    if (x!=x2 && y!= y2) {
-
-      x += xStep;
-      y += yStep;
+  void driving(float x2, float y2) {
+    //println("x2: ", x2, "; y2: ", y2, "; pos.x: ", pos.x, "; pos.y: ", pos.y, "; x: ", x, "; pos.y: ", y);
+    if (abs(x2 - pos.x) <= 1 && abs(y2 - pos.y) <= 1) {
+      //xStep = (pos.x - x)/sailTime;
+      //yStep = (pos.y - y)/sailTime;
+    } else {
+      xStep = (x2 - x)/sailTime;
+      yStep = (y2 - y)/sailTime;
+      pos.x += xStep;
+      pos.y += yStep;
     }
+    pushMatrix();
+    translate(0, sin(st + frameCount/33.)*3);
+
+    popMatrix();
   }
+  //sin(frameCount/18.)/3
+
+
+  void disappear() {
+    pos.x +=0.3;
+    pos.y +=sin(frameCount/18.) -0.3;
+  }
+
+  //void sail() {
+
+  //  if (x!=x2 && y!= y2) {
+
+  //    x += xStep;
+  //    y += yStep;
+  //  }
+  //}
 
   void bob() {
 
@@ -137,12 +159,10 @@ Floating(float _x, float _y, float _x2, float _y2, String _type, PImage _img) {
     ny += nStep;
   }
 
-  void rock() {
+  void leftright() {
 
     rotateAngle = rockAmt * cos(st + angle);
   }
-
-
 
 
   //pos.x +=1;
@@ -151,11 +171,23 @@ Floating(float _x, float _y, float _x2, float _y2, String _type, PImage _img) {
 
   void updown() {
     pushMatrix();
-    translate(0, sin(st + frameCount/23.)*2);
+    translate(0, sin(st + frameCount/33.)*3);
     image(img, pos.x, pos.y);
     popMatrix();
   }
 
+  void rotateboat() {
+    //println(rotateAngle);
+    rotateAngle+=rstep;
+    //pushMatrix();
+    //imageMode(CENTER);
+    //translate(pos.x, pos.y);
+    //rotate(r);
+    //r+= rstep;
+    //image(img, 0, 0);
+
+    //popMatrix();
+  }
 
 
 
